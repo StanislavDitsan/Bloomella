@@ -118,3 +118,33 @@ header .dropdown-menu {
     border-radius: 0;
     margin-right: 50px;
 }
+
+/*------------ Keyframe css animation / index.html */
+
+.fa-leaf:hover,
+.fa-truck:hover,
+.fa-gift:hover {
+    animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-2px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
