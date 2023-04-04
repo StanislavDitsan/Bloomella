@@ -67,9 +67,14 @@
 }
 
 /*------------ Footer / base.html */
-footer {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
+
+.footer a {
+    color: #28a745;
+    transition: all 0.2s ease-in-out;
+}
+
+.footer a:hover {
+    transform: scale(1.2);
+    text-decoration: none;
+    color: #000;
 }
