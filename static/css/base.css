@@ -39,3 +39,9 @@
     border-radius: 50%;
     height: 50px;
 }
+
+/*------------ Our Team section images / index.html */
+.team-member img {
+    width: 100px;
+    height: 100px;
+  }
