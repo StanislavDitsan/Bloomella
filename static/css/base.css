@@ -81,12 +81,12 @@ html {
 /*------------ Footer / base.html */
 
 .footer a {
-    color: #28a745;
+    color: #000;
     transition: all 0.2s ease-in-out;
 }
 
 .footer a:hover {
     transform: scale(1.2);
     text-decoration: none;
-    color: #000;
+    color: #28a745;
 }
