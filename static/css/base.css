@@ -1,0 +1,21 @@
+/*------------ Landing page / index.html */
+
+#landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#landing-page .row {
+    max-width: 1200px;
+}
+
+#landing-page .col-md-6 {
+    padding: 0 30px;
+}
+
+#landing-page img {
+    max-width: 100%;
+    height: auto;
+}
