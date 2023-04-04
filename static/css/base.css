@@ -40,8 +40,28 @@
     height: 50px;
 }
 
+/*--Separator line second / index.html */
+.separator-second {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 50px 0;
+}
+
+.separator-second::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    right: 0;
+    border-top: 3px solid black;
+    border-radius: 50%;
+    height: 50px;
+    transform: rotate(180deg);
+}
+
 /*------------ Our Team section images / index.html */
 .team-member img {
     width: 100px;
     height: 100px;
-  }
+}
