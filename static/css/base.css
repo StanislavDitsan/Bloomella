@@ -172,4 +172,8 @@ a.nav-link.main-logo-link {
         order: -1;
         display: none;
     }
+
+    #landing-page {
+        height: 80vh;
+    }
 }
