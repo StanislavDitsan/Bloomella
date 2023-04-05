@@ -70,23 +70,29 @@
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="#">
-                    <div class="input-group w-50 mx-auto">
-                        <input class="form-control border border-black rounded-0" type="text" name="q"
-                            placeholder="Search">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-outline-success border-black rounded-1" type="submit"
-                                aria-label="Search">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
+                <ul class="list-inline list-unstyled text-center text-lg-center my-0 mt-5">
+                    <li class="list-inline-item">
+                        <a class="text-dark nav-link" href="#" id="search-dropdown" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Search
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="search-dropdown">
+                            <form method="GET" action="#">
+                                <div class="input-group w-100 mx-auto">
+                                    <input class="form-control border border-black rounded-0" type="text" name="q"
+                                        placeholder="Search">
+                                    <div class="input-group-append">
+                                        <button class="form-control btn btn-outline-success border-black rounded-1"
+                                            type="submit" aria-label="Search">
+                                            <span class="icon">
+                                                <i class="fas fa-search"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0 mt-4">
+                    </li>
                     <li class="list-inline-item">
                         <a class="text-dark nav-link" href="#" id="home-dropdown" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
