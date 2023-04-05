@@ -153,3 +153,23 @@ a.nav-link.main-logo-link {
         transform: translateY(0);
     }
 }
+
+/*------------ Media query / nav-logo / base.html */
+/* For screens smaller than 768px (mobile and tablet) */
+@media (max-width: 767px) {
+    a.nav-link.main-logo-link {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .input-group-append {
+        order: -1;
+        display: none;
+    }
+}
