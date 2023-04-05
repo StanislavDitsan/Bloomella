@@ -163,16 +163,7 @@ a.nav-link.main-logo-link {
         justify-content: center;
         align-items: center;
     }
-
-    .input-group {
-        width: 100%;
-    }
-
-    .input-group-append {
-        order: -1;
-        display: none;
-    }
-
+    
     #landing-page {
         height: 80vh;
     }
