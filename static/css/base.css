@@ -120,6 +120,10 @@ header .dropdown-menu {
     margin-right: 50px;
 }
 
+a.nav-link.main-logo-link {
+    width: max-content;
+}
+
 /*------------ Keyframe css animation / index.html */
 
 .fa-leaf:hover,
