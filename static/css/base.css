@@ -165,6 +165,19 @@ a.nav-link.main-logo-link {
     }
     
     #landing-page {
-        height: 80vh;
+        height: 70vh;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #landing-page {
+        height: 50vh;
+    }
+
+    a.nav-link.main-logo-link {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
