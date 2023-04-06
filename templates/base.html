@@ -169,6 +169,20 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <!-- Header jQuery remove/add effect  -->
+    <script>
+        let prevScrollPos = window.pageYOffset;
+
+        window.onscroll = function () {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                document.querySelector(".sticky-top").classList.remove("hidden");
+            } else {
+                document.querySelector(".sticky-top").classList.add("hidden");
+            }
+            prevScrollPos = currentScrollPos;
+        }
+    </script>
     {% endblock %}
 
     <!-- Footer -->
