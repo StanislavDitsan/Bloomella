@@ -124,6 +124,15 @@ a.nav-link.main-logo-link {
     width: max-content;
 }
 
+/*------------ Sticky header / base.html */
+.sticky-top {
+    transition: top 0.9s;
+}
+
+.sticky-top.hidden {
+    top: -200px;
+}
+
 /*------------ Keyframe css animation / index.html */
 
 .fa-leaf:hover,
@@ -163,7 +172,7 @@ a.nav-link.main-logo-link {
         justify-content: center;
         align-items: center;
     }
-    
+
     #landing-page {
         height: 70vh;
     }
