@@ -1,0 +1,43 @@
+[{
+    "pk": 1,
+    "model": "products.category",
+    "fields": {
+        "name": "bouquets",
+        "friendly_name": "Bouquets"
+    }
+}, {
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
+        "name": "roses",
+        "friendly_name": "Roses"
+    }
+}, {
+    "pk": 3,
+    "model": "products.category",
+    "fields": {
+        "name": "tulips",
+        "friendly_name": "Tulips"
+    }
+}, {
+    "pk": 4,
+    "model": "products.category",
+    "fields": {
+        "name": "plants",
+        "friendly_name": "Plants"
+    }
+}, {
+    "pk": 5,
+    "model": "products.category",
+    "fields": {
+        "name": "gift_baskets",
+        "friendly_name": "Gift Baskets"
+    }
+}, {
+    "pk": 6,
+    "model": "products.category",
+    "fields": {
+        "name": "all_products",
+        "friendly_name": "All Products"
+    }
+}]
