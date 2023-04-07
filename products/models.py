@@ -27,6 +27,7 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    in_stock = models.BooleanField(default=True)
     rating = models.DecimalField(max_digits=6,
                                  decimal_places=2,
                                  null=True,
