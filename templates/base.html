@@ -77,7 +77,7 @@
                             Home
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="home-dropdown">
-                            <a class="dropdown-item" href="#">Home Page</a>
+                            <a class="dropdown-item" href="{% url 'home' %}">Home Page</a>
                             <a class="dropdown-item" href="#">About Us</a>
                             <a class="dropdown-item" href="#">Delivery</a>
                             <a class="dropdown-item" href="#">FAQ</a>
@@ -89,12 +89,12 @@
                             Shop
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="shop-dropdown">
+                            <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
                             <a class="dropdown-item" href="#">Bouquets</a>
                             <a class="dropdown-item" href="#">Roses</a>
                             <a class="dropdown-item" href="#">Tulips</a>
                             <a class="dropdown-item" href="#">Plants</a>
                             <a class="dropdown-item" href="#">Gift Baskets</a>
-                            <a class="dropdown-item" href="#">All Products</a>
                         </div>
                     </li>
                     <li class="list-inline-item dropdown">
