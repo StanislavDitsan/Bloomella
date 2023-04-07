@@ -133,6 +133,44 @@ a.nav-link.main-logo-link {
     top: -200px;
 }
 
+/*------------ Products container/ products.html */
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: 100%;
+    margin-bottom: 40px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-footer {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card-footer p {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
 /*------------ Keyframe css animation / index.html */
 
 .fa-leaf:hover,
