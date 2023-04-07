@@ -7,7 +7,7 @@ from .models import Product
 def all_products(request):
     """ All products, including sorting and search queries """
 
-    products = Products.objects.all()
+    products = Product.objects.all()
     context = {
         'products': products,
     }
