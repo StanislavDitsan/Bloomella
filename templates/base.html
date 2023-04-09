@@ -90,11 +90,11 @@
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="shop-dropdown">
                             <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
-                            <a class="dropdown-item" href="#">Bouquets</a>
-                            <a class="dropdown-item" href="#">Roses</a>
-                            <a class="dropdown-item" href="#">Tulips</a>
-                            <a class="dropdown-item" href="#">Plants</a>
-                            <a class="dropdown-item" href="#">Gift Baskets</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=bouquets">Bouquets</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=roses">Roses</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=tulips">Tulips</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=plants">Plants</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=gift_baskets">Gift Baskets</a>
                         </div>
                     </li>
                     <li class="list-inline-item dropdown">
