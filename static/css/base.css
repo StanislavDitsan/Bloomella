@@ -171,6 +171,12 @@ a.nav-link.main-logo-link {
     margin-bottom: 20px;
 }
 
+/*------------ Highlights the active sorting btn */
+.dropdown-item.selected{
+    font-weight: bold;
+    background-color: #28a7461c;
+}
+
 /*------------ Keyframe css animation / index.html */
 
 .fa-leaf:hover,
