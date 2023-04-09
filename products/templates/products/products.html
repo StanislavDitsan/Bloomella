@@ -1,15 +1,28 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
-{% endblock %}
 
 {% block content %}
+
+<!-- Sorting Button -->
+<div class="container-fluid sorting-button mt-3 text-right">
+    <div class="row">
+        <div class="col">
+            <div class="dropdown">
+                <button class="btn btn-sm btn-outline-success text-uppercase dropdown-toggle" type="button"
+                    id="sortDropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sort by
+                </button>
+                <div class="dropdown-menu" aria-labelledby="sortDropdownMenuButton">
+                    <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">Category</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">Rating</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Products container -->
 <div class="container-fluid" id="shop-container">
     <div class="row">
