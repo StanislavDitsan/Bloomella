@@ -143,8 +143,7 @@ a.nav-link.main-logo-link {
 
 .card {
     width: 100%;
-    margin-bottom: 40px;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -159,15 +158,11 @@ a.nav-link.main-logo-link {
 
 .card-footer {
     padding: 20px;
-    background-color: #f8f8f8;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 
 .card-footer p {
     font-weight: 700;
     color: #333;
-    margin-bottom: 20px;
 }
 
 /*------------ Highlights the active sorting btn */
