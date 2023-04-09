@@ -5,9 +5,16 @@
 {% block content %}
 
 <!-- Sorting Button -->
-<div class="container-fluid sorting-button mt-3 text-right">
+<div class="container-fluid sorting-button mt-3">
     <div class="row">
-        <div class="col">
+        <div class="col justify-content-center">
+            {% for c in current_categories %}
+            <a class="btn btn-sm btn-outline-success" href="{% url 'products' %}?category={{ c.name }}">
+                {{ c.friendly_name }}
+            </a>
+            {% endfor %}
+        </div>
+        <div class="col text-right">
             <div class="dropdown">
                 <button class="btn btn-sm btn-outline-success text-uppercase dropdown-toggle" type="button"
                     id="sortDropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
