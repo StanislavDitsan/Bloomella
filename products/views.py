@@ -12,7 +12,7 @@ def all_products(request):
 
     products = Product.objects.all()
     query = None
-    categories = None
+    categories = Category.objects.all()
     sort = None
     direction = None
 
@@ -51,6 +51,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'all_categories': categories,
     }
 
     return render(request, 'products/products.html', context)
