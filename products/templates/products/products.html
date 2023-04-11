@@ -9,10 +9,11 @@
     <div class="row">
         <div class="col justify-content-center">
             {% for c in current_categories %}
-            <a class="btn btn-sm btn-outline-success" href="{% url 'products' %}?category={{ c.name }}">
+            <a class="btn btn-sm disabled" href="{% url 'products' %}?category={{ c.name }}">
                 {{ c.friendly_name }}
             </a>
             {% endfor %}
+            <span class="btn btn-sm disabled">{{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}</span>
         </div>
 
         <!-- Sorting Button -->
