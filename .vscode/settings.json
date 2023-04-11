@@ -27,6 +27,6 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
-    "python.formatting.provider": "yapf",
-    "python.pythonPath": "/home/codeany/.pyenv/versions/3.8.12/bin/python"
+    "python.formatting.provider": "yapf"
+    
 }

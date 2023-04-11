@@ -25,19 +25,29 @@
             {% endif %}
         </div>
         <!-- Sorting Button -->
-        <div class="col text-right">
+        <div class="col text-right ml-auto">
             <div class="dropdown">
                 <button class="btn btn-sm btn-outline-success text-uppercase dropdown-toggle" type="button"
                     id="sortDropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Sort by
                 </button>
                 <div class="dropdown-menu" aria-labelledby="sortDropdownMenuButton">
-                    <a class="dropdown-item{% if request.GET.sort == 'price' %} selected{% endif %}"
-                        href="{% url 'products' %}?sort=price&direction=asc">Price</a>
-                    <a class="dropdown-item{% if request.GET.sort == 'category' %} selected{% endif %}"
-                        href="{% url 'products' %}?sort=category&direction=asc">Category</a>
-                    <a class="dropdown-item{% if request.GET.sort == 'rating' %} selected{% endif %}"
-                        href="{% url 'products' %}?sort=rating&direction=desc">Rating</a>
+                    <a class="dropdown-item{% if request.GET.sort == 'price' and request.GET.direction == 'asc' %} selected{% endif %}"
+                        href="{% url 'products' %}?sort=price&direction=asc">Price (low to high)</a>
+                    <a class="dropdown-item{% if request.GET.sort == 'price' and request.GET.direction == 'desc' %} selected{% endif %}"
+                        href="{% url 'products' %}?sort=price&direction=desc">Price (high to low)</a>
+                    <a class="dropdown-item{% if request.GET.sort == 'category' and request.GET.direction == 'asc' %} selected{% endif %}"
+                        href="{% url 'products' %}?sort=category&direction=asc">Category (A-Z)</a>
+                    <a class="dropdown-item{% if request.GET.sort == 'category' and request.GET.direction == 'desc' %} selected{% endif %}"
+                        href="{% url 'products' %}?sort=category&direction=desc">Category (Z-A)</a>
+                    <a class="dropdown-item{% if request.GET.sort == 'rating' and request.GET.direction == 'asc' %} selected{% endif %}"
+                        href="{% url 'products' %}?sort=rating&direction=asc">Rating (low to high)</a>
+                    <a class="dropdown-item{% if request.GET.sort == 'rating' and request.GET.direction == 'desc' %} selected{% endif %}"
+                        href="{% url 'products' %}?sort=rating&direction=desc">Rating (high to low)</a>
+                    <a class="dropdown-item{% if request.GET.sort == 'name' and request.GET.direction == 'asc' %} selected{% endif %}"
+                        href="{% url 'products' %}?sort=name&direction=asc">Name (A-Z)</a>
+                    <a class="dropdown-item{% if request.GET.sort == 'name' and request.GET.direction == 'desc' %} selected{% endif %}"
+                        href="{% url 'products' %}?sort=name&direction=desc">Name (Z-A)</a>
                 </div>
             </div>
         </div>

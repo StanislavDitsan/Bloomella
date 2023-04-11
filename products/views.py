@@ -3,6 +3,7 @@ from django.db.models import Q
 from .models import Product
 from django.contrib import messages
 from .models import Product, Category
+from django.db.models.functions import Lower
 import random
 # Create your views here.
 
