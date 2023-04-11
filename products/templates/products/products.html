@@ -14,16 +14,7 @@
             </a>
             {% endfor %}
         </div>
-        <!-- Suggested category  -->
-        <div class="col text-center">
-            {% if random_category %}
-            <p class="text-dark">Suggested category:
-                <a class="text-success"
-                    href="{% url 'products' %}?category={{ random_category.name }}">{{ random_category.friendly_name }}
-                </a>
-            </p>
-            {% endif %}
-        </div>
+
         <!-- Sorting Button -->
         <div class="col text-right ml-auto">
             <div class="dropdown">
@@ -131,4 +122,16 @@
         </div>
     </div>
 </div>
+<!-- Suggested category  -->
+<div class="text-center mb-5 ">
+    {% if random_category %}
+    <p class="text-dark small">Suggested category:
+        <a class="text-success"
+            href="{% url 'products' %}?category={{ random_category.name }}">{{ random_category.friendly_name }}
+        </a>
+    </p>
+    
+    {% endif %}
+</div>
+
 {% endblock %}
