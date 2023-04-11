@@ -54,6 +54,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'random_category': random_category,
+        'all_categories': all_categories,
     }
 
     return render(request, 'products/products.html', context)

@@ -4,16 +4,27 @@
 
 {% block content %}
 
-<!-- Display for current category -->
+
 <div class="container-fluid sorting-button mt-3">
     <div class="row">
-        <div class="col justify-content-center">
+        <div class="col">
             {% for c in current_categories %}
-            <a class="btn btn-sm disabled" href="{% url 'products' %}?category={{ c.name }}">
-                {{ c.friendly_name }}
-            </a>
-            {% endfor %}
-            <span class="btn btn-sm disabled">{{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}</span>
+            <!-- Back to all products btn -->
+            <span>
+                <a class="btn btn-sm btn-outline-success text-uppercase mb-2" href="{% url 'products' %}">Products</a>
+            </span>
+            <!-- Display for current category -->
+            <div class="badge badge-transparent">
+                <a class="text-dark" href="{% url 'products' %}?category={{ c.name }}">
+                    {{ c.friendly_name }}
+                </a>
+                {% endfor %}
+                <!-- Total producuts found -->
+                <span>
+                    {{ products|length }} Products{% if search_term %} found for
+                    <strong>"{{ search_term }}"</strong>{% endif %}
+                </span>
+            </div>
         </div>
 
         <!-- Sorting Button -->
@@ -49,8 +60,17 @@
 <!-- Products container -->
 <div class="container-fluid" id="shop-container">
     <div class="row">
-        <div class="col text-center mt-2">
+        <div class="col text-center">
             <h2>Products</h2>
+            {% for c in current_categories %}
+
+
+            {% for category in all_categories %}
+            <a class="text-dark small m-2 ml-auto text-center"
+                href="{% url 'products' %}?category={{ category.name }}">{{ category.friendly_name }}</a>
+            {% endfor %}
+
+            {% endfor %}
             <br class="mb-1">
         </div>
     </div>
@@ -131,7 +151,7 @@
             href="{% url 'products' %}?category={{ random_category.name }}">{{ random_category.friendly_name }}
         </a>
     </p>
-    
+
     {% endif %}
 </div>
 
