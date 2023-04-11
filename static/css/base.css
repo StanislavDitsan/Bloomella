@@ -166,7 +166,7 @@ a.nav-link.main-logo-link {
 }
 
 /*------------ Highlights the active sorting btn */
-.dropdown-item.selected{
+.dropdown-item.selected {
     font-weight: bold;
     background-color: #28a7461c;
 }

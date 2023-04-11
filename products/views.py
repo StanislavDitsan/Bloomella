@@ -3,7 +3,7 @@ from django.db.models import Q
 from .models import Product
 from django.contrib import messages
 from .models import Product, Category
-
+import random
 # Create your views here.
 
 
@@ -15,6 +15,8 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
+    all_categories = Category.objects.exclude(name='all_products')
+    random_category = random.choice(all_categories)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -50,6 +52,7 @@ def all_products(request):
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'random_category': random_category,
     }
 
     return render(request, 'products/products.html', context)
