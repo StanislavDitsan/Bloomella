@@ -155,17 +155,14 @@
 
     {% endif %}
 </div>
+
 <!-- Scroll to top btn  -->
 <div class="btn-scroll btt shadow-sm">
     <a class="btn-scroll d-flex h-200">
         <i class="fas fa-arrow-up text-dark mx-auto my-auto"></i>
     </a>
 </div>
-
-{% endblock %}
-
-{% block postloadjs %}
-
+<!-- Scroll to top btn javascript -->
 <script type="text/javascript">
     $('.btn-scroll').click(function (e) {
         window.scrollTo(0, 0)
