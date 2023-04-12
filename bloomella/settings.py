@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'active_link',
     'home',
     'products',
+    'bag',
 ]
 
 MIDDLEWARE = [
