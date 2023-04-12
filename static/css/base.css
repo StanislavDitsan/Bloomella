@@ -171,6 +171,20 @@ a.nav-link.main-logo-link {
     background-color: #28a7461c;
 }
 
+/*------------ Scroll btn to the top */
+.btn-scroll {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.btn-scroll:hover {
+    text-decoration: none;
+}
+
 /*------------ Keyframe css animation / index.html */
 
 .fa-leaf:hover,
