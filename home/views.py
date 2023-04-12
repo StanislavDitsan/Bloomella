@@ -3,6 +3,6 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def index(request):
-    """ A view to return the index page """
-    return render(request, 'home/index.html')
+def view_bag(request):
+    """ A view to renders the bag page """
+    return render(request, 'bag/bag.html')
