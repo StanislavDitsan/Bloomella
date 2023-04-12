@@ -92,6 +92,12 @@ html {
     color: #28a745;
 }
 
+/*------------ Hover for some btn */
+#hover:hover {
+    transform: scale(1.1);
+    color: #28a745;
+}
+
 /*------------ Header / base.html */
 
 header {
