@@ -197,6 +197,12 @@ a.nav-link.main-logo-link {
     border: 1px solid #ced4da;
 }
 
+/*------------ Update % remove links / bag.html */
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /*------------ Keyframe css animation / index.html */
 
 .fa-leaf:hover,
