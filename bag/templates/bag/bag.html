@@ -42,7 +42,27 @@
                             <p class="my-0">€{{ item.product.price }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">{{ item.quantity }}</p>
+                            <form class="form" action="{% url 'add_to_bag' item.item_id %}" method="POST">
+                                {% csrf_token %}
+                                <div class="form-row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <!-- Quantity controls -->
+                                                <input class="form-control qty_input text-center" type="number"
+                                                    name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                    data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-dark qty-btn minus"
+                                                        type="button">-</button>
+                                                    <button class="btn btn-outline-dark qty-btn plus"
+                                                        type="button">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </td>
                         <td class="py-3">
                             <p class="my-0">€{{ item.product.price }}</p>
@@ -93,4 +113,11 @@
         </div>
     </div>
 </div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quanity_input_script.html' %}
+
 {% endblock %}

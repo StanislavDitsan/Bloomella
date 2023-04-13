@@ -1,0 +1,29 @@
+<script type="text/javascript">
+    // Get all the quantity input fields
+    const qtyInputs = document.querySelectorAll('.qty_input');
+
+    // Loop through the input fields and add the functionality to the buttons
+    qtyInputs.forEach(qtyInput => {
+        const minusBtn = qtyInput.parentNode.querySelector('.minus');
+        const plusBtn = qtyInput.parentNode.querySelector('.plus');
+        const minValue = parseInt(qtyInput.min);
+        const maxValue = parseInt(qtyInput.max);
+
+        minusBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            let currentValue = parseInt(qtyInput.value);
+            if (currentValue > minValue) {
+                qtyInput.value = currentValue - 1;
+            }
+        });
+
+        plusBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            let currentValue = parseInt(qtyInput.value);
+            if (currentValue < maxValue) {
+                qtyInput.value = currentValue + 1;
+            }
+        });
+    });
+
+</script>
