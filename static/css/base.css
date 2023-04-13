@@ -191,6 +191,12 @@ a.nav-link.main-logo-link {
     text-decoration: none;
 }
 
+/*------------ Quantity input fields / product_detail.html */
+.btn-outline-dark {
+    border-color: #343a40;
+    border: 1px solid #ced4da;
+}
+
 /*------------ Keyframe css animation / index.html */
 
 .fa-leaf:hover,
