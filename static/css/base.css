@@ -203,6 +203,23 @@ a.nav-link.main-logo-link {
     cursor: pointer;
 }
 
+/*------------ Message container / bag.html */
+
+.message-container {
+    position: fixed;
+    top:25px;
+    right: 50px;
+    z-index: 99999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 /*------------ Keyframe css animation / index.html */
 
 .fa-leaf:hover,
