@@ -1,0 +1,92 @@
+/* Style the item rows */
+.row>.col-lg-6>.row>.row {
+    margin: 0.5rem 0;
+}
+
+/* Style the item image */
+.row>.col-lg-6>.row>.row>.col-2>a>img {
+    border-radius: 0.25rem;
+}
+
+/* Style the item name and details */
+.row>.col-lg-6>.row>.row>.col-7>p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.row>.col-lg-6>.row>.row>.col-7>p.small {
+    font-size: 0.875rem;
+    font-weight: normal;
+}
+
+/* Style the item subtotal */
+.row>.col-lg-6>.row>.row>.col-3>p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Style the order total section */
+.text-black {
+    color: #333;
+}
+
+/* Style the form fields */
+fieldset {
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid #e6e6e6;
+    border-radius: 0.5rem;
+}
+
+fieldset>.fieldset-label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5rem;
+    background-color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e6e6e6;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    color: #000000;
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+/* Style the Stripe card element */
+#card-element {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e6e6e6;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Style fieldset hover  */
+
+fieldset {
+    transition: transform 0.3s ease-in-out;
+}
+
+fieldset:hover {
+    transform: scale(1.01);
+}
+
+#card-errors {
+    font-size: 0.875rem;
+}
