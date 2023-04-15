@@ -207,7 +207,7 @@ a.nav-link.main-logo-link {
 
 .message-container {
     position: fixed;
-    top:25px;
+    top: 25px;
     right: 50px;
     z-index: 99999999;
 }
@@ -218,6 +218,12 @@ a.nav-link.main-logo-link {
 
 .toast-capper {
     height: 2px;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /*------------ Keyframe css animation / index.html */
