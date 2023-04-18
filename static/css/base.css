@@ -226,6 +226,24 @@ a.nav-link.main-logo-link {
     overflow-y: auto;
 }
 
+/*------------ Allauth forms */
+
+.allauth-form-inner-content {
+    padding-bottom: 3rem;
+}
+
+.allauth-form-inner-content>form {
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid #e6e6e633;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.allauth-form-inner-content>form:hover {
+    transform: scale(1.01);
+}
+
 /*------------ Keyframe css animation / index.html */
 
 .fa-leaf:hover,
