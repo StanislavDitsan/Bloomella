@@ -95,25 +95,25 @@ fieldset:hover {
 
 .StripeElement,
 .stripe-style-input {
-  box-sizing: border-box;
-  height: 40px;
-  padding: 10px 12px;
-  border: 1px solid transparent;
-  border-radius: 0px;
-  background-color: white;
-  box-shadow: 0 1px 3px 0 #e6ebf1;
-  -webkit-transition: box-shadow 150ms ease;
-  transition: box-shadow 150ms ease;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 0px;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
 }
 
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
-  box-shadow: 0 1px 3px 0 #cfd7df;
+    box-shadow: 0 1px 3px 0 #cfd7df;
 }
 
 .StripeElement--webkit-autofill {
-  background-color: #fefde5 !important;
+    background-color: #fefde5 !important;
 }
 
 .stripe-style-input::placeholder {
@@ -147,4 +147,29 @@ fieldset:hover {
     justify-content: center;
     margin: 0;
     height: 100%;
+}
+
+/* Country select box  */
+
+select,
+select option {
+    color: #000000;
+    padding-bottom: 1rem;
+    border: 1px solid #e6e6e6 !important;
+    border-radius: 0.25rem !important;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    border-radius: 0.25rem;
+}
+
+#id_country {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0.5rem;
+
 }
