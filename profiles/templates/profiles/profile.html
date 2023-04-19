@@ -15,6 +15,19 @@
             <br>
         </div>
     </div>
-    {{ profile }}
+    <div class="row mb-5">
+        <div class="col-12 col-lg-6">
+            <p class="text-black">Default Delivery Information</p>
+            <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-outline-success mb-4">Update Information</button>
+            </form>
+        </div>
+        <div class="col-12 col-lg-6">
+            <p class="text-black">Oder History</p>
+            {{ orders }}
+        </div>
+    </div>
 </div>
 {% endblock %}
