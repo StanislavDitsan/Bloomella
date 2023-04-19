@@ -65,6 +65,44 @@ input[type="checkbox"] {
     margin-right: 0.5rem;
 }
 
+/* un-checked checkbox */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #e6e6e6;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+/* checked checkbox */
+input[type="checkbox"]:checked {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid rgba(0, 0, 0, 0.734);
+    outline: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+/* custom checkmark */
+input[type="checkbox"]:checked::after {
+    content: "\2714";
+    display: block;
+    color: #28a745;
+    font-size: 14px;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+}
+
 /* Style the Stripe card element */
 #card-element {
     width: 100%;
