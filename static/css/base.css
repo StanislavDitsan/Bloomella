@@ -244,6 +244,20 @@ a.nav-link.main-logo-link {
     transform: scale(1.01);
 }
 
+/* Hide the checkbox */
+.checkboxinput:checked {
+    opacity: 0;
+}
+
+/* Show the tick when the checkbox is checked */
+.checkboxinput:checked+.form-check-label::before {
+    content: "\2713";
+    display: inline-block;
+    margin-left: -15px;
+    font-size: 1.2em;
+    color: #28a745;
+}
+
 /*------------ Keyframe css animation / index.html */
 
 .fa-leaf:hover,
