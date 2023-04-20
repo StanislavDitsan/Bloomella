@@ -5,6 +5,7 @@ from django.contrib import messages
 from .models import Product, Category
 from django.db.models.functions import Lower
 from .forms import ProductForm
+from django.http import HttpResponseRedirect
 import random
 # Create your views here.
 
@@ -121,9 +122,12 @@ def edit_product(request, product_id):
 
 
 def delete_product(request, product_id):
-    """ Delete a product from the store """
     product = get_object_or_404(Product, pk=product_id)
-    product.delete()
-    messages.success(request, 'Product deleted!')
+    """ Delete a product in the store """
+    if request.method == 'POST':
+        product.delete()
+        messages.success(request, 'Product deleted!')
+        return HttpResponseRedirect(reverse('products'))
 
-    return redirect(reverse('products'))
+    context = {'product': product}
+    return render(request, 'delete_product.html', context)

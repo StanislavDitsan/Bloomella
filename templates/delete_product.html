@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col vh-100">
+      <br>
+      <h1>Delete Product</h1>
+      <br>
+      <p>Are you sure you want to delete the following product?</p>
+      <p>{{ product.name }}</p>
+      <form action="{% url 'delete_product' product.id %}" method="POST">
+        {% csrf_token %}
+        <button class="btn btn-sm btn-outline-danger" type="submit">Yes, Delete It</button>
+        <a class="btn btn-sm btn-outline-success" href="{% url 'products' %}">No, Cancel</a>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
