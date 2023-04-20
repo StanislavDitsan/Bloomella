@@ -153,12 +153,6 @@ a.nav-link.main-logo-link {
 
 /*------------ Products container/ products.html */
 
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 .card {
     width: 100%;
     margin-bottom: 30px;
