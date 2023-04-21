@@ -22,7 +22,7 @@
                 enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
-                <div class="text-right">
+                <div class="text-left">
                     <a class="btn btn-sm btn-outline-dark" href="{% url 'products' %}">Cancel</a>
                     <button class="btn btn-sm btn-outline-success" type="submit">Update Product</button>
                 </div>

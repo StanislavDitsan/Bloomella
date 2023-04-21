@@ -264,6 +264,47 @@ a.nav-link.main-logo-link {
     color: #28a745;
 }
 
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Hide the checkbox */
+.custom-checkbox .custom-control-input:checked {
+    opacity: 0;
+}
+.custom-checkbox .custom-control-label::before {
+    border-color: #343a40;
+    width: 14px;
+    height: 14px;
+}
+
+/* Show the tick when the checkbox is checked */
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    content: "\2713";
+    display: inline-block;
+    font-size: 1.2em;
+    color: #28a745;
+    background: none;
+    border: none;
+    width: 14px;
+    height: 14px;
+}
+
+
+
 /*------------ Keyframe css animation / index.html */
 
 .fa-leaf:hover,
