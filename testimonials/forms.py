@@ -8,9 +8,14 @@ class TestimonialForm(forms.ModelForm):
         model = Testimonial
         fields = ['name', 'email', 'message']
 
-    def clean_email(self):
-        email = self.cleaned_data.get('email')
-        if not email.endswith('@example.com'):
-            raise forms.ValidationError(
-                'Please use an example.com email address')
-        return email
+        labels = {
+            'name': 'Your Name',
+            'email': 'Your Email Address',
+            'message': 'Your Testimonial',
+        }
+
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control'}),
+            'message': forms.Textarea(attrs={'class': 'form-control'}),
+        }
