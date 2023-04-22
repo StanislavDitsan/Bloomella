@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <h1>Testimonials</h1>
+  <ul>
+    {% for testimonial in testimonials %}
+      <li>{{ testimonial.name }} - {{ testimonial.created_at|date:"F j, Y" }}<br>
+        {{ testimonial.message }}
+      </li>
+    {% empty %}
+      <li>No testimonials yet.</li>
+    {% endfor %}
+  </ul>
+
+  <a href="{% url 'add_testimonial' %}">Add testimonial</a>
+{% endblock %}
