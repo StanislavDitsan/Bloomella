@@ -1,17 +1,36 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
 {% block content %}
-  <h1>Testimonials</h1>
-  <ul>
-    {% for testimonial in testimonials %}
-      <li>{{ testimonial.name }} - {{ testimonial.created_at|date:"F j, Y" }}<br>
-        {{ testimonial.message }}
-      </li>
-    {% empty %}
-      <li>No testimonials yet.</li>
-    {% endfor %}
-  </ul>
 
-  <a href="{% url 'add_testimonial' %}">Add testimonial</a>
+{% if request.user.is_superuser %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <br>
+      <h2 class="text-center">Super Admin Page</h2>
+      <p class="text-center text-muted">Welcome, {{ request.user.username }}!</p>
+      <h3>Testimonials</h3>
+      <ul>
+        {% for testimonial in testimonials %}
+        <li>{{ testimonial.name }} - {{ testimonial.created_at|date:"F j, Y" }}<br>
+          {{ testimonial.message }}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% else %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Access Denied</h1>
+      <p>You are not authorized to view this page.</p>
+    </div>
+  </div>
+</div>
+{% endif %}
+
 {% endblock %}

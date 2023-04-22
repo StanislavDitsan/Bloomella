@@ -1,12 +1,24 @@
 {% extends 'base.html' %}
-{% load static %}
-
 
 {% block content %}
-<h1>Add Testimonial</h1>
-<form method="POST">
-  {% csrf_token %}
-  {{ form|crispy }}
-  <button type="submit">Submit</button>
-</form>
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <br>
+      <h2 class="text-center">Add Testimonial</h2>
+      <form class="mt-4" method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-outline-success mb-4" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
 {% endblock %}
