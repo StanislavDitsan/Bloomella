@@ -1,14 +1,17 @@
 from django.shortcuts import render, redirect
 from .models import Testimonial
 from .forms import TestimonialForm
+from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def testimonial_list(request):
     testimonials = Testimonial.objects.filter(approved=True)
     context = {'testimonials': testimonials}
     return render(request, 'testimonials/testimonial_list.html', context)
 
 
+@login_required
 def add_testimonial(request):
     if request.method == 'POST':
         form = TestimonialForm(request.POST)
