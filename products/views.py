@@ -11,7 +11,6 @@ import random
 # Create your views here.
 
 
-@login_required
 def all_products(request):
     """ All products, including sorting and search queries """
 
