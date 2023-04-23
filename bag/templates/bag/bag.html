@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row mb-5">
         <div class="col">
             {% if bag_items %}
             <!-- Shopping Bag Table -->
@@ -93,9 +93,9 @@
                     </tr>
                     <tr>
                         <td colspan="5" class="text-center">
-                            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                                <span class="icon btn btn-outline-dark">
-                                    <i class="fas fa-chevron-left"></i>
+                            <a href="{% url 'products' %}" class="btn btn-outline-dark">
+                                <span>
+                                    <i class="fas fa-cart-plus"></i>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </span>
 
@@ -112,9 +112,9 @@
             </div>
             {% else %}
             <p class="lead mb-5">Your bag is empty</p>
-            <a class="btn btn-sm btn-outline-success" href="{% url 'products' %}">
+            <a class="btn btn-outline-success" href="{% url 'products' %}">
                 <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
+                    <i class="fas fa-cart-plus"></i>
                 </span>
                 <span>Keep Shopping</span>
             </a>

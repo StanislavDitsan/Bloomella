@@ -87,8 +87,8 @@
                             checked>
                         {% else %}
                         <label class="form-check-label" for="id-save-info">
-                            <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
-                            <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                            <a class="text-success" href="{% url 'account_signup' %}">Create an account</a> or
+                            <a class="text-success" href="{% url 'account_login' %}">login</a> to save this information
                         </label>
                         {% endif %}
                     </div>
@@ -103,15 +103,15 @@
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
 
-                <div class="submit-button text-center mt-5 mb-5">
-                    <a href="{% url 'view_bag' %}" class="btn btn-sm btn-outline-dark">
+                <div class="submit-button mt-5 mb-5">
+                    <a href="{% url 'view_bag' %}" class="btn btn-outline-dark">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="font-weight-bold">Adjust Bag</span>
+                        <span>Adjust Bag</span>
                     </a>
-                    <button id="submit-button" class="btn btn-sm btn-outline-success">
-                        <span class="font-weight-bold">Complete Order</span>
+                    <button id="submit-button" class="btn btn-outline-success float-right">
+                        <span>Complete Order</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
                         </span>
@@ -123,7 +123,7 @@
                         <span>Your card will be charged <strong>€{{ grand_total|floatformat:2 }}</strong></span>
                     </p>
                     {% if free_delivery_delta > 0 %}
-                    <p class="mb-1 text-danger">
+                    <p class="mb-1 text-danger mt-3">
                         You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong>
                         more!
                     </p>
