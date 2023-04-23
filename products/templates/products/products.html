@@ -7,21 +7,21 @@
 
 <div class="container-fluid sorting-button mt-3">
     <div class="row">
-        <div class="col">
+        <div class="col-6">
             {% for c in current_categories %}
             <!-- Back to all products btn -->
             <span>
-                <a class="btn btn-sm btn-outline-success text-uppercase mb-2" href="{% url 'products' %}">All
+                <a class="btn text-uppercase" href="{% url 'products' %}">All
                     Products</a>
             </span>
             <!-- Display for current category -->
-            <div class="badge badge-transparent">
-                <a class="text-dark" href="{% url 'products' %}?category={{ c.name }}">
+            <div class="text-muted">
+                <a class="text-muted" href="{% url 'products' %}?category={{ c.name }}">
                     {{ c.friendly_name }}
                 </a>
                 {% endfor %}
                 <!-- Total producuts found -->
-                <span>
+                <span class="total-products text-muted">
                     {{ products|length }} Products{% if search_term %} found for
                     <strong>"{{ search_term }}"</strong>{% endif %}
                 </span>
@@ -29,9 +29,9 @@
         </div>
 
         <!-- Sorting Button -->
-        <div class="col text-right ml-auto">
+        <div class="col-6 text-right ml-auto">
             <div class="dropdown">
-                <button class="btn btn-sm btn-outline-success text-uppercase dropdown-toggle" type="button"
+                <button class="btn text-uppercase dropdown-toggle" type="button"
                     id="sortDropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Sort by
                 </button>
@@ -67,7 +67,7 @@
 
 
             {% for category in all_categories %}
-            <a class="text-dark small m-2 ml-auto text-center"
+            <a class="text-muted small m-2 ml-auto text-center"
                 href="{% url 'products' %}?category={{ category.name }}">{{ category.friendly_name }}</a>
             {% endfor %}
 
