@@ -118,6 +118,35 @@
     </div>
 </section>
 
+<!-- Testimonials container -->
+
+<div class="testimonial-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center">Testimonials</h2>
+                {% if request.user.is_authenticated %}
+                <p class="text-center"><a href="{% url 'add_testimonial' %}">Add Testimonial</a></p>
+                {% endif %}
+                <div class="testimonial-list">
+                    {% for testimonial in testimonials %}
+                    <div class="testimonial">
+                        <p class="testimonial-author">{{ testimonial.name }}, {{ testimonial.created_at|date:"F j, Y" }}
+                        </p>
+                        <p class="testimonial-message">{{ testimonial.message }}</p>
+                    </div>
+                    {% empty %}
+                    <div class="testimonial">
+                        <p class="testimonial-message">No testimonials yet.</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- Our Story container -->
 
 <div class="container my-5">
