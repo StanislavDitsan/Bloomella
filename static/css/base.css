@@ -131,11 +131,25 @@ header ul {
 
 header .dropdown-menu {
     border-radius: 0;
-    margin-right: 50px;
+    margin: auto;
 }
 
 a.nav-link.main-logo-link {
     width: max-content;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-nav li:hover a {
+    color: #000000;
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
 }
 
 /*------------ Sticky header / base.html */
@@ -352,7 +366,6 @@ a.nav-link.main-logo-link {
 }
 
 
-
 /*------------ Keyframe css animation / index.html */
 
 .fa-leaf:hover,
@@ -385,9 +398,8 @@ a.nav-link.main-logo-link {
 
 /*------------ Media query / nav-logo / base.html */
 /* For screens smaller than 768px (mobile and tablet) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     a.nav-link.main-logo-link {
-        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -404,9 +416,19 @@ a.nav-link.main-logo-link {
     }
 
     a.nav-link.main-logo-link {
-        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    .navbar-nav>li {
+        float: none;
     }
 }
