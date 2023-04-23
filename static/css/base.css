@@ -285,6 +285,7 @@ a.nav-link.main-logo-link {
 .custom-checkbox .custom-control-input:checked {
     opacity: 0;
 }
+
 .custom-checkbox .custom-control-label::before {
     border-color: #343a40;
     width: 14px;
@@ -301,6 +302,57 @@ a.nav-link.main-logo-link {
     border: none;
     width: 14px;
     height: 14px;
+}
+
+/* Testimonial section  */
+
+.testimonial-section {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.testimonial-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.testimonial {
+    flex: 0 0 auto;
+    width: 350px;
+    margin: 0 10px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.051);
+    text-align: center;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.testimonial-message {
+    margin-bottom: 0;
+}
+
+/* Custom btn style */
+
+.btn {
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    font-size: 12px;
+    transition-duration: 0.4s;
+    box-shadow: 0px 8px 16px 0px rgba(102, 102, 102, 0.06);
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: black;
+    box-shadow: 1px 8px 16px 1px rgba(183, 182, 182, 0.496);
 }
 
 
