@@ -348,6 +348,21 @@ a.nav-link.main-logo-link {
     margin-bottom: 0;
 }
 
+.testimonial-users {
+    flex: 0 0 auto;
+    margin: 0 10px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(102, 102, 102, 0.06);
+    text-align: center;
+
+}
+
+.testimonial-list {
+    height: 300px;
+    overflow-y: scroll;
+}
+
 /* Custom btn style */
 
 .btn {
