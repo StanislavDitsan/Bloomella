@@ -2,13 +2,34 @@ from django.shortcuts import render, redirect
 from .models import Testimonial
 from .forms import TestimonialForm
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import get_object_or_404, redirect
 from django.contrib import messages
+from django.contrib.auth.decorators import user_passes_test
+
+
+@login_required
+def unapproved_testimonials(request):
+    unapproved_testimonials = Testimonial.objects.filter(approved=False)
+    context = {'unapproved_testimonials': unapproved_testimonials}
+    return render(request, 'testimonials/unapproved_testimonials.html',
+                  context)
+
+
+@user_passes_test(lambda u: u.is_superuser)
+def approve_testimonial(request, testimonial_id):
+    testimonial = get_object_or_404(Testimonial, pk=testimonial_id)
+    testimonial.approved = True
+    testimonial.save()
+    return redirect('testimonial_list')
 
 
 @login_required
 def testimonial_list(request):
-    approved_testimonials = Testimonial.objects.filter(approved=True)
-    context = {'testimonials': approved_testimonials}
+    if request.user.is_superuser:
+        testimonials = Testimonial.objects.all()
+    else:
+        testimonials = Testimonial.objects.filter(approved=True)
+    context = {'testimonials': testimonials}
     return render(request, 'testimonials/testimonial_list.html', context)
 
 

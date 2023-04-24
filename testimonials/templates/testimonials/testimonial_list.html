@@ -6,21 +6,35 @@
 
 {% if request.user.is_superuser %}
 <div class="container">
-  <div class="row">
+  <div class="row mb-4">
     <div class="col">
       <br>
       <h2 class="text-center">Super Admin Page</h2>
       <p class="text-center text-muted">Welcome, {{ request.user.username }}!</p>
       <h3>Testimonials</h3>
-      <ul>
-        {% for testimonial in testimonials %}
-        <li>{{ testimonial.name }} - {{ testimonial.created_at|date:"F j, Y" }}<br>
-          {{ testimonial.message }}
-        </li>
-        {% endfor %}
-      </ul>
+      <div class="testimonial-list">
+        <ul>
+          {% for testimonial in testimonials %}
+          {% if not testimonial.approved %}
+          <li class="mt-1">
+            <span class="text-danger">UNAPPROVED - </span>
+            {{ testimonial.name }} - {{ testimonial.created_at|date:"F j, Y" }}<br>
+            {{ testimonial.message }}
+            <hr class="text-muted">
+          </li>
+          {% else %}
+          <li class="mt-1">
+            {{ testimonial.name }} - {{ testimonial.created_at|date:"F j, Y" }}<br>
+            {{ testimonial.message }}
+            <hr class="text-muted">
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </div>
+  <a href="{% url 'unapproved_testimonials' %}" class="btn btn-outline-dark">Go Back</a>
 </div>
 {% else %}
 <div class="container">
