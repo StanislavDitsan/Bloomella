@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <br>
+            <h2 class="mb-4 text-center">Delete Profile</h2>
+            <br>
+            <p>Are you sure you want to delete your profile? This action cannot be undone.</p>
+            <form method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Yes, delete my profile</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}©
