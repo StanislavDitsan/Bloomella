@@ -20,6 +20,7 @@ def approve_testimonial(request, testimonial_id):
     testimonial = get_object_or_404(Testimonial, pk=testimonial_id)
     testimonial.approved = True
     testimonial.save()
+    messages.success(request, 'Testimonial was successfully approved')
     return redirect('testimonial_list')
 
 
@@ -37,6 +38,7 @@ def testimonial_list(request):
 def delete_testimonial(request, testimonial_id):
     testimonial = get_object_or_404(Testimonial, pk=testimonial_id)
     testimonial.delete()
+    messages.success(request, 'Testimonial was successfully deleted')
     return redirect('testimonial_list')
 
 
