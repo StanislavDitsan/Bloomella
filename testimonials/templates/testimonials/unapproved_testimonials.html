@@ -19,6 +19,7 @@
             <div class="testimonial-users">
                 <p>{{ testimonial.message }}</p>
                 <p>Submitted by {{ testimonial.name }} ({{ testimonial.email }} - {{ testimonial.created_at|date:"F j, Y, g:i a" }})</p>
+                <a class="btn btn-outline-danger" href="{% url 'delete_testimonial' testimonial.id %}">Delete</a>
                 <a class="btn btn-outline-success" href="{% url 'approve_testimonial' testimonial.id %}">Approve</a>
             </div>
             {% endfor %}

@@ -5,7 +5,7 @@
 {% block content %}
 
 {% if request.user.is_superuser %}
-<div class="container">
+<div class="container py-4">
   <div class="row mb-4">
     <div class="col">
       <br>
@@ -34,7 +34,7 @@
       </div>
     </div>
   </div>
-  <a href="{% url 'unapproved_testimonials' %}" class="btn btn-outline-dark">Go Back</a>
+  <a href="{% url 'unapproved_testimonials' %}" class="btn btn-outline-dark mb-5">Go Back</a>
 </div>
 {% else %}
 <div class="container">

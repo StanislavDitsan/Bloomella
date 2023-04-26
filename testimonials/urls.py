@@ -10,4 +10,7 @@ urlpatterns = [
     path('approve/<int:testimonial_id>/',
          views.approve_testimonial,
          name='approve_testimonial'),
+    path('delete/<int:testimonial_id>/',
+         views.delete_testimonial,
+         name='delete_testimonial'),
 ]

@@ -33,6 +33,13 @@ def testimonial_list(request):
     return render(request, 'testimonials/testimonial_list.html', context)
 
 
+@user_passes_test(lambda u: u.is_superuser)
+def delete_testimonial(request, testimonial_id):
+    testimonial = get_object_or_404(Testimonial, pk=testimonial_id)
+    testimonial.delete()
+    return redirect('testimonial_list')
+
+
 @login_required
 def add_testimonial(request):
     if request.method == 'POST':
