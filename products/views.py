@@ -147,3 +147,22 @@ def delete_product(request, product_id):
 
     context = {'product': product}
     return render(request, 'delete_product.html', context)
+
+
+def add_to_saved(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    if product.saved_for_later:
+        # Remove the saved for later flag from the product
+        product.saved_for_later = False
+        product.save()
+    else:
+        # Mark the product as saved for later
+        product.saved_for_later = True
+        product.save()
+    return redirect('product_detail', product_id=product_id)
+
+
+def saved_for_later(request):
+    saved_products = Product.objects.filter(saved_for_later=True)
+    return render(request, 'products/saved_for_later.html',
+                  {'saved_products': saved_products})
