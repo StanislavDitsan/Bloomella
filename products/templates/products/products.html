@@ -157,8 +157,8 @@
 <div class="text-center mb-5 ">
     {% if random_category %}
     <p class="text-dark small">Suggested category:
-        <a class="text-success" href="{% url 'products' %}?category={{ random_category.name }}">{{
-            random_category.friendly_name }}
+        <a class="text-success" href="{% url 'products' %}?category={{ random_category.name }}">
+            {{ random_category.friendly_name }}
         </a>
     </p>
 
