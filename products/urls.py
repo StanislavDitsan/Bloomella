@@ -10,4 +10,6 @@ urlpatterns = [
     path('products/<int:product_id>/delete/',
          delete_product,
          name='delete_product'),
+    path('products/<int:product_id>/save/', views.add_to_saved, name='add_to_saved'),
+    path('products/saved-for-later/', views.saved_for_later, name='saved_for_later'),
 ]

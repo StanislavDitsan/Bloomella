@@ -92,6 +92,11 @@
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </div>
             </form>
+            {% if product.saved_for_later %}
+    <a href="{% url 'add_to_saved' product.id %}">Remove from saved</a>
+{% else %}
+    <a href="{% url 'add_to_saved' product.id %}">Save for later</a>
+{% endif %}
         </div>
     </div>
 </div>
