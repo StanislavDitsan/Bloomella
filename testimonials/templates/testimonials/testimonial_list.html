@@ -26,6 +26,8 @@
           <li class="mt-1">
             {{ testimonial.name }} - {{ testimonial.created_at|date:"F j, Y" }}<br>
             {{ testimonial.message }}
+            <span class="mt-2 d-flex"></span>
+            <a class="text-danger small" href="{% url 'delete_testimonial' testimonial.id %}">Delete</a>
             <hr class="text-muted">
           </li>
           {% endif %}
