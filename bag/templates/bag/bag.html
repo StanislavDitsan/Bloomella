@@ -34,7 +34,7 @@
 
                     {% for item in bag_items %}
                     <tr>
-                        <td class="p-3 w-25">
+                        <td class="p-1 w-25">
                             {% if item.product.image %}
                             <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                             {% else %}
@@ -71,9 +71,8 @@
                                 </div>
                             </form>
                             <!-- Update % remove controls -->
-                            <a class="update-link badge badge-success float-left"><small>Update</small></a>
-                            <a class="remove-item badge badge-danger float-right" id="remove_{{ item.item_id }}"
-                                data-size="{{ item.size }}"><small>Remove</small></a>
+                            <a class="update-link badge badge-success"><small>Update</small></a>
+                            <a class="remove-item badge badge-danger" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
                         </td>
                         <td class="py-3">
                             <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -81,7 +80,7 @@
                     </tr>
                     {% endfor %}
                     <tr>
-                        <td colspan="5" class="pt-5 text-center">
+                        <td colspan="5" class="pt-5">
                             <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
                             <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
                             <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
@@ -94,7 +93,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="5" class="text-center">
+                        <td colspan="5">
                             <a href="{% url 'products' %}" class="btn btn-outline-dark">
                                 <span>
                                     <i class="fas fa-cart-plus"></i>
