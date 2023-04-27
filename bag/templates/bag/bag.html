@@ -71,8 +71,8 @@
                                 </div>
                             </form>
                             <!-- Update % remove controls -->
-                            <a class="update-link badge badge-success"><small>Update</small></a>
-                            <a class="remove-item badge badge-danger" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
+                            <a class="update-link btn btn-sm btn-outline-success"><small>Update</small></a>
+                            <a class="remove-item btn btn-sm btn-outline-danger" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
                         </td>
                         <td class="py-3">
                             <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>

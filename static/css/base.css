@@ -445,16 +445,27 @@ a.nav-link.main-logo-link {
     .update-link,
     .remove-item {
         display: flex;
-        padding-right: 50px;
+        padding-right: 30px;
         justify-content: center;
         margin-top: 10px;
+        padding-left: 30px;
     }
 
     .update-link{
         margin-top: -5px;
     }
-
     
+    .img-fluid {
+        margin-top: 1rem;
+    }
+
+    .table td, .table th {
+        padding: 0.2rem;
+    }
+
+    .table th {
+        text-align: center;
+    }
 }
 
 
