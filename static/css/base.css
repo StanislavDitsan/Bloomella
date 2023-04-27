@@ -224,7 +224,7 @@ a.nav-link.main-logo-link {
 .message-container {
     position: fixed;
     top: 25px;
-    right: 50px;
+    right: 20px;
     z-index: 99999999;
 }
 
