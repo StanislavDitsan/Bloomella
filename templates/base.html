@@ -82,7 +82,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto pt-lg-4">
                         <li class="nav-item dropdown">
-                            <a class="text-dark nav-link btn-lg" href="#" type="button" data-toggle="dropdown"
+                            <a class="text-dark nav-link" href="#" type="button" data-toggle="dropdown"
                                 aria-expanded="false">
                                 Home
                             </a>
@@ -94,7 +94,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="text-dark nav-link btn-lg" href="#" type="button" data-toggle="dropdown"
+                            <a class="text-dark nav-link" href="#" type="button" data-toggle="dropdown"
                                 aria-expanded="false">
                                 Shop
                             </a>
@@ -109,7 +109,7 @@
                                     Baskets</a>
                             </div>
                         </li>
-                        <li class="list-inline-item ml-lg-auto">
+                        <li class="nav-item list-inline-item ml-lg-auto">
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                                 href="{% url 'view_bag' %}">
                                 <div class="text-dark">
@@ -124,10 +124,10 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown dropleft">
-                            <a class="text-dark nav-link" href="#" id="user-options" data-toggle="dropdown"
+                            <a class="nav-item text-dark nav-link" href="#" id="user-options" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" aria-label="account" data-placement="bottom"
                                 title="My Account">
-                                <span class="btn-lg"><i class="far fa-user"></i></span>
+                                <span><i class="far fa-user"></i></span>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
@@ -146,7 +146,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown dropleft">
-                            <a class="text-dark nav-link btn-lg" href="#" id="search-dropdown" data-toggle="dropdown"
+                            <a class="text-dark nav-link" href="#" id="search-dropdown" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" aria-label="Search">
                                 <i class="fas fa-search"></i>
                             </a>
