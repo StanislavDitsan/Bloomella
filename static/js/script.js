@@ -10,7 +10,7 @@ $(document).ready(function () {
 });
 
 // Script for toast 
-$('.toast').toast('show');
+$('.toast').toast('show').delay(3000).fadeOut('slow');
 
 // Header jQuery remove/add effect
 let prevScrollPos = window.pageYOffset;
