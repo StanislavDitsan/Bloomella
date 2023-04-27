@@ -38,7 +38,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d6e8932834.js" crossorigin="anonymous"></script>
 
     <!-- JQuery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
@@ -71,7 +71,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container-fluid">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <img src="{% static 'images/Bloomella-logo.png' %}" width="90" height="40" alt="Bloomella Logo">
+                    <img src="{% static 'images/Bloomella-logo.png' %}" width="100" height="45" alt="Bloomella Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -109,29 +109,6 @@
                                     Baskets</a>
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="text-dark nav-link btn-lg" href="#" id="search-dropdown" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Search
-                            </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="search-dropdown">
-                                <form method="GET" action="{% url 'products' %}">
-                                    <div class="input-group w-100 mx-auto">
-                                        <input class="form-control border border-black rounded-0" type="text" name="q"
-                                            placeholder="Search">
-                                        <div class="input-group-append">
-                                            <button
-                                                class="form-control btn btn-outline-success ml-1 border-black rounded-1"
-                                                type="submit" aria-label="Search">
-                                                <span class="icon">
-                                                    <i class="fas fa-search"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
                         <li class="list-inline-item ml-lg-auto">
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                                 href="{% url 'view_bag' %}">
@@ -166,6 +143,29 @@
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                                 {% endif %}
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropleft">
+                            <a class="text-dark nav-link btn-lg" href="#" id="search-dropdown" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" aria-label="Search">
+                                <i class="fas fa-search"></i>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="search-dropdown">
+                                <form method="GET" action="{% url 'products' %}">
+                                    <div class="input-group w-100 mx-auto">
+                                        <input class="form-control border border-black rounded-0" type="text" name="q"
+                                            placeholder="Search">
+                                        <div class="input-group-append">
+                                            <button
+                                                class="form-control btn btn-outline-success ml-1 border-black rounded-1"
+                                                type="submit" aria-label="Search">
+                                                <span class="icon">
+                                                    <i class="fa-solid fa-magnifying-glass fa-fade"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </li>
                     </ul>
