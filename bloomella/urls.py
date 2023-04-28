@@ -17,3 +17,4 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'bloomella.views.handler404'
+handler505 = 'bloomella.views.handler505'
