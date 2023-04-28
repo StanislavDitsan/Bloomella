@@ -380,6 +380,40 @@ a.nav-link.main-logo-link {
     box-shadow: 1px 8px 16px 1px rgba(183, 182, 182, 0.496);
 }
 
+/*------------ Mailchimp */
+#mc_embed_signup {
+    background: #fff;
+
+    font: 14px Helvetica, Arial, sans-serif;
+
+}
+
+#mc_embed_signup .button {
+    background-color: white !important;
+    color: black !important;
+    font-size: 12px !important;
+    transition-duration: 0.4s !important;
+    box-shadow: 0px 8px 16px 0px rgba(102, 102, 102, 0.06) !important;
+    margin-top: 0%;
+    justify-content: center;
+}
+
+#mc_embed_signup .button:hover {
+    background-color: #ffffff !important;
+    color: black !important;
+    box-shadow: 1px 8px 16px 1px rgba(183, 182, 182, 0.496) !important;
+}
+
+#mc_embed_signup input {
+    border: 1px solid rgba(0, 0, 0, 0.051) !important;
+}
+
+#mc_embed_signup .indicates-required {
+    text-align: left !important;
+    font-size: 11px;
+    margin-right: 4%;
+}
+
 /*------------ Keyframe css animation / index.html */
 
 .fa-leaf:hover,
