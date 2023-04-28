@@ -4,7 +4,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models.functions import Lower
 from django.http import HttpResponseRedirect
-from .models import Product
 from .models import Product, Category
 from .forms import ProductForm
 import random
