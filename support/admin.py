@@ -25,7 +25,12 @@ class SupportTicketAdmin(admin.ModelAdmin):
 
             # send email notification to user
             subject = f"Response to your support ticket: {obj.subject}"
-            message = f"Dear {obj.name},\n\nWe have responded to your support ticket regarding '{obj.subject}':\n\n{obj.response}\n\nThank you for using our support service.\n\nBest regards,\nThe Support Team"
+            message = (f"Dear {obj.name},\n\n"
+                       f"We have responded to your support ticket regarding \
+                    '{obj.subject}':\n\n"
+                       f"{obj.response}\n\n"
+                       f"Thank you for using our support service.\n\n"
+                       f"Best regards,\nThe Support Team")
             from_email = settings.EMAIL_HOST_USER
             recipient_list = [obj.email]
             send_mail(subject, message, from_email, recipient_list)

@@ -52,8 +52,8 @@ def add_testimonial(request):
             testimonial.save()
             messages.success(
                 request,
-                'Thank you for your testimonial. It will be available shortly after it is approved by an admin.'
-            )
+                'Thank you for your testimonial. It will be available shortly \
+                    after it is approved by an admin.')
             return redirect('home')
     else:
         form = TestimonialForm()
