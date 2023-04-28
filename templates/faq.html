@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} Frequently Asked Questions {% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    <br>
+    <h2 class="text-center">Frequently Asked Questions</h2>
+    <br>
+
+    <div class="accordion" id="accordionExample">
+        <div>
+            <div class="py-1" id="headingOne">
+                <div class="mb-0 text-left">
+                    <button class="btn btn-link text-decoration-none" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="h6">How do I place an order for flowers?</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    To place an order for flowers, you can either visit our shop in person or give us a call at
+                    555-1234. You can also browse our selection of flowers and order online through our website.
+                </div>
+            </div>
+        </div>
+
+        <div class="py-1" id="headingTwo">
+            <div class="mb-0 text-left">
+                <button class="btn btn-link text-decoration-none" type="button" data-toggle="collapse"
+                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <span class="h6">Do you offer same-day delivery?</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+                Yes, we offer same-day delivery for orders placed before 4pm. Orders placed after 4pm will be delivered
+                the following day.
+            </div>
+        </div>
+
+        <div class="py-1" id="headingThree">
+            <div class="mb-0 text-left">
+                <button class="btn btn-link text-decoration-none" type="button" data-toggle="collapse"
+                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <span class="h6">What is your return policy?</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+                We do not accept returns on floral arrangements, but if you are unsatisfied with your order for any
+                reason, please contact us and we will do our best to make it right.
+            </div>
+        </div>
+
+        <div class="py-1" id="headingFour">
+            <div class="mb-0 text-left">
+                <button class="btn btn-link text-decoration-none" type="button" data-toggle="collapse"
+                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <span class="h6">Can I customize a floral arrangement?</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+            <div class="card-body">
+                Yes, we can customize a floral arrangement to your specifications. Please give us a call or visit us in
+                person to discuss your preferences.
+            </div>
+        </div>
+
+        <div class="py-1" id="headingFive">
+            <div class="mb-0 text-left">
+                <button class="btn btn-link text-decoration-none" type="button" data-toggle="collapse"
+                    data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <span class="h6">What forms of payment do you accept?</span>
+                </button>
+            </div>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+            <div class="card-body">
+                We accept all major credit cards, as well as cash and checks. For online orders, we also accept payment
+                through PayPal.
+            </div>
+        </div>
+
+        <div class="py-1" id="headingSix">
+            <div class="mb-0 text-left">
+                <button class="btn btn-link text-decoration-none" type="button" data-toggle="collapse"
+                    data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <span class="h6">Do you offer wedding floral arrangements?</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+            <div class="card-body">
+                Yes, we specialize in wedding floral arrangements. Please give us a call, send email or visit us in person to
+                discuss your wedding flowers.
+            </div>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}

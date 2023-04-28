@@ -9,3 +9,7 @@ def handler404(request, exception):
 def handler505(request, exception):
     """ Error Handler 505 - Internal Server Error """
     return render(request, "errors/505.html", status=505)
+
+
+def faq(request):
+    return render(request, "faq.html")
