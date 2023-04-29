@@ -512,6 +512,10 @@ a.nav-link.main-logo-link {
         margin-left: auto;
         margin-right: auto;
     }
+
+    #mc_embed_signup .mc-field-group input {
+        width: 90% !important;
+    }
 }
 
 
