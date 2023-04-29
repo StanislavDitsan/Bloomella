@@ -446,7 +446,7 @@ a.nav-link.main-logo-link {
 
 /*------------ Media query / nav-logo / base.html */
 /* For screens smaller than 768px (mobile and tablet) */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     a.nav-link.main-logo-link {
         display: inline-flex;
         justify-content: center;
@@ -514,11 +514,14 @@ a.nav-link.main-logo-link {
     }
 }
 
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 768px) {
     #landing-page {
         height: 50vh;
     }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 
     a.nav-link.main-logo-link {
         display: flex;
@@ -544,6 +547,12 @@ a.nav-link.main-logo-link {
     .text-dark.nav-link.btn-lg {
         size: 16px;
     }
+
+
+    .nav-link:focus {
+        outline: none;
+
+    }
 }
 
 @media (min-width: 992px) {
@@ -554,5 +563,10 @@ a.nav-link.main-logo-link {
 
     .navbar-nav>li {
         float: none;
+    }
+
+    .nav-link:focus {
+        outline: none;
+
     }
 }
