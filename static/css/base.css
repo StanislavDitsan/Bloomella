@@ -469,14 +469,6 @@ a.nav-link.main-logo-link {
 
     }
 
-    .account-link {
-        size: 15px;
-    }
-
-    .text-dark.nav-link.btn-lg {
-        size: 16px;
-    }
-
     .update-link,
     .remove-item {
         display: flex;
@@ -538,15 +530,6 @@ a.nav-link.main-logo-link {
         padding-left: 18px;
 
     }
-
-    .account-link {
-        size: 15px;
-    }
-
-    .text-dark.nav-link.btn-lg {
-        size: 16px;
-    }
-
 
     .nav-link:focus {
         outline: none;
