@@ -18,6 +18,7 @@
             <p>Are you sure you want to delete your profile? This action cannot be undone.</p>
             <form method="POST">
                 {% csrf_token %}
+                <span><a href="{% url 'profile' %}" class="btn btn-outline-success">Go Back</a></span>
                 <button type="submit" class="btn btn-danger">Yes, delete my profile</button>
             </form>
         </div>
