@@ -14,11 +14,11 @@
             <h1 class="display-3">Bloomella</h1>
             <p class="text-uppercase">Where every bloom tells a story</p>
             <div class="my-5">
-                <h4>
+                <span>
                     <a href="{% url 'products' %}" class="shop-now-button btn btn-outline-success text-uppercase">Shop
                         Now</a>
                     <a href="#about" class="shop-now-button btn btn-outline-success text-uppercase">Learn More</a>
-                </h4>
+                </span>
             </div>
         </div>
         <div class="col-md-6 my-auto">
@@ -62,19 +62,19 @@
     <div class="row text-center mt-5">
         <div class="col-sm-4">
             <i class="fas fa-leaf fa-2x mb-4"></i>
-            <h4 class="font-weight-bold">Fresh Flowers Daily</h4>
+            <div class="font-weight-bold h5">Fresh Flowers Daily</div>
             <p>We offer fresh flowers daily, carefully selected and arranged just for you.
                 Come visit us today and let us help you find the perfect arrangement!</p>
         </div>
         <div class="col-sm-4">
             <i class="fas fa-truck fa-2x mb-4"></i>
-            <h4 class="font-weight-bold">Quick Delivery</h4>
+            <div class="font-weight-bold h5">Quick Delivery</div>
             <span>Free delivery on orders over €{{ free_delivery_threshold }}!</span>
             <p>We offer fast and reliable delivery options to get your flowers to their destination on time.</p>
         </div>
         <div class="col-sm-4">
             <i class="fas fa-gift fa-2x mb-4"></i>
-            <h4 class="font-weight-bold">Gifts for Special Occasions</h4>
+            <div class="font-weight-bold h5">Gifts for Special Occasions</div>
             <p>Whether it's a birthday, anniversary, or other special occasion, we have the perfect gift to make it
                 unforgettable.</p>
         </div>
@@ -91,8 +91,8 @@
                 <div class="card border-0 team-member">
                     <img src="{% static 'images/emoji-staff.jpg' %}" class="card-img-top mx-auto" alt="Owner Logo">
                     <div class="card-body text-center">
-                        <h5 class="card-title mb-0">Svetlana</h5>
-                        <div class="card-text text-black-50">Owner</div>
+                        <span class="card-title mb-0 h4">Svetlana</span>
+                        <div class="card-text text-muted">Owner</div>
                     </div>
                 </div>
             </div>
@@ -101,8 +101,8 @@
                     <img src="{% static 'images/emoji-staff2.jpg' %}" class="card-img-top mx-auto bg-transparent"
                         alt="Nadia Staff Logo">
                     <div class="card-body text-center">
-                        <h5 class="card-title mb-0">Nadia</h5>
-                        <div class="card-text text-black-50">Staff</div>
+                        <span class="card-title mb-0 h4">Nadia</span>
+                        <div class="card-text text-muted">Staff</div>
                     </div>
                 </div>
             </div>
@@ -111,8 +111,8 @@
                     <img src="{% static 'images/emoji-staff3.jpg' %}" class="card-img-top mx-auto bg-transparent"
                         alt="Yuliana Staff Logo">
                     <div class="card-body text-center">
-                        <h5 class="card-title mb-0">Yuliana</h5>
-                        <div class="card-text text-black-50">Staff</div>
+                        <span class="card-title mb-0 h4">Yuliana</span>
+                        <div class="card-text text-muted">Staff</div>
                     </div>
                 </div>
             </div>
@@ -175,7 +175,7 @@
 
 <div class="container mt-2">
     <div>
-        <h5 class="text-center">Subscribe To Our Newsletter <i class="fa-regular fa-envelope fa-bounce"></i></h5>
+        <div class="text-center h5">Subscribe To Our Newsletter <i class="fa-regular fa-envelope fa-bounce"></i></div>
     </div>
     <div id="mc_embed_signup">
         <form
