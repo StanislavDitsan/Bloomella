@@ -890,6 +890,10 @@ When the sort button is active, the user can see which sort option is selected.
 
 - Was used to speed up images load time and reduce file size and maintain high quality.
 
+[Privacypolicygenerator](https://www.privacypolicygenerator.info/)
+
+- Was used to generate websites privacy policies
+
 # Stripe 
 
 - To facilitate payments for the online store, Stripe was integrated into the website's backend. This involved creating an account with Stripe, and then using the documentation provided to add the relevant HTML, Python, and JS code necessary to process payments.
@@ -941,7 +945,9 @@ I tested this project to guarantee that everything works properly.
 
 - Lighthouse in Chrome DevTools is used to audit a site for performance, accessibility, progress, and SEO.
 
-![](assets/images/light-house.png)
+<p align="center">
+  <img src="assets/images/light-house.png" width="100%">
+</p>
 
 # Code Validation
 
@@ -950,10 +956,18 @@ I tested this project to guarantee that everything works properly.
 
 - HTML validator passed with no errors
 
+<p align="center">
+  <img src="assets/images/html-check.png" width="100%">
+</p> 
+
 
 ### W3C CSS Validator
 
 - CSS validator passed with no errors
+
+<p align="center">
+  <img src="assets/images/css-check.png" width="100%">
+</p> 
 
 
 # Browser Compatibility
@@ -969,7 +983,9 @@ I tested this project to guarantee that everything works properly.
 ## Color Contrast Accessibility Validator
 - I was able to examine the colour contrast of my website using Color Contrast Accessibility Validator
 
-![](assets/images/a11y.png)
+<p align="center">
+  <img src="assets/images/a11y.png" width="100%">
+</p> 
 
 # Bugs
 
