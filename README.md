@@ -720,6 +720,14 @@ When the sort button is active, the user can see which sort option is selected.
 
 - This page allows users to reset their passwords by providing their email address. They will receive instructions on how to reset their passwords.
 
+## 404 Page 
+
+<p align="center">
+  <img src="assets/images/404.png" width="100%">
+</p>
+
+- The purpose of a 404 page is to inform the user that the requested page cannot be found and to provide them with some options to navigate to other page on the website.
+
 # Design 
 
 - Bloomella's website features a clean and modern design that emphasizes usability and ease of navigation. The layout is intuitive and user-friendly, with a focus on showcasing the products in a visually compelling way. The overall look is minimalistic and understated, yet stylish and refined.
