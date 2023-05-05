@@ -23,4 +23,4 @@ window.onscroll = function () {
         document.querySelector(".sticky-top").classList.add("hidden");
     }
     prevScrollPos = currentScrollPos;
-}
+};

@@ -167,15 +167,15 @@
 
 <!-- Scroll to top btn  -->
 <div class="btn-scroll btt shadow-sm">
-    <a class="btn-scroll d-flex h-200">
+    <a class="btn-scroll d-flex h-200" aria-label="arrow-up">
         <i class="fas fa-arrow-up text-dark mx-auto my-auto"></i>
     </a>
 </div>
 <!-- Scroll to top btn javascript -->
-<script type="text/javascript">
+<script>
     $('.btn-scroll').click(function (e) {
-        window.scrollTo(0, 0)
-    })
+        window.scrollTo(0, 0);
+    });
 </script>
 
 {% endblock %}
