@@ -426,7 +426,11 @@ a.nav-link.main-logo-link {
 
 .fa-leaf:hover,
 .fa-truck:hover,
-.fa-gift:hover {
+.fa-gift:hover,
+.fa-thumbs-up:hover,
+.fa-mobile:hover,
+.fa-heart:hover
+ {
     animation: bounce 0.5s;
 }
 
