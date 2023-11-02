@@ -4,7 +4,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Montserrat', serif;
+    font-family: 'Lato', sans-serif;
 }
 
 html {
@@ -40,53 +40,13 @@ a:hover {
     max-width: 1200px;
 }
 
-#landing-page .col-md-6 {
+/* #landing-page .col-md-6 {
     padding: 0 30px;
-}
+} */
 
 #landing-page img {
     max-width: 100%;
     height: auto;
-}
-
-/*------------ Separator line / index.html */
-
-.separator {
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin: 50px 0;
-}
-
-.separator::before {
-    content: "";
-    position: absolute;
-    top: -25px;
-    left: 0;
-    right: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.294);
-    border-radius: 50%;
-    height: 50px;
-}
-
-/*--Separator line second / index.html */
-.separator-second {
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin: 50px 0;
-}
-
-.separator-second::before {
-    content: "";
-    position: absolute;
-    top: -25px;
-    left: 0;
-    right: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.294);
-    border-radius: 50%;
-    height: 50px;
-    transform: rotate(180deg);
 }
 
 /*------------ Our Team section images / index.html */
@@ -429,8 +389,7 @@ a.nav-link.main-logo-link {
 .fa-gift:hover,
 .fa-thumbs-up:hover,
 .fa-mobile:hover,
-.fa-heart:hover
- {
+.fa-heart:hover {
     animation: bounce 0.5s;
 }
 
@@ -454,6 +413,19 @@ a.nav-link.main-logo-link {
     100% {
         transform: translateY(0);
     }
+}
+
+.quick-pick {
+    border-radius: 20px;
+    box-shadow: 0px 0px 16px 8px rgba(102, 102, 102, 0.06);
+    padding: 10px;
+    margin: 20px;
+}
+
+.mailchimp {
+    border-radius: 20px;
+    box-shadow: 0px 0px 16px 8px rgba(102, 102, 102, 0.06);
+    padding: 10px;
 }
 
 /*------------ Media query / nav-logo / base.html */
