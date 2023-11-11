@@ -27,13 +27,235 @@ a:hover {
     text-decoration: none;
 }
 
+p {
+    font-size: large;
+}
+
+.carousel-inner {
+    border: 1px solid #bbbbbb00;
+    border-radius: 10px;
+}
+
+/* Arrow pointer */
+
+.arrow-down-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.arrow-down {
+    font-size: 24px;
+    color: #000000;
+    text-decoration: none;
+}
+
+/* What we offer section */
+
+.main {
+    max-width: 75rem;
+    padding: 3em 1.5em;
+    margin: 0 auto;
+}
+
+
+.main__heading {
+    font-weight: 600;
+    font-size: 2.25em;
+    margin-bottom: 0.75em;
+    text-align: center;
+    color: #eceff1;
+}
+
+.flower-cards__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+}
+
+.flower-card {
+    --flow-space: 0.5em;
+    --hsl: var(--hue), var(--saturation), var(--lightness);
+    flex: 1 1 14rem;
+    padding: 1.5em 2em;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    align-items: start;
+    gap: 1.25em;
+    color: #eceff1;
+    background-color: #2b2b2b;
+    border: 1px solid #eceff133;
+    border-radius: 20px;
+}
+
+.flower-card__heading {
+    font-size: 1.05em;
+    font-weight: 600;
+}
+
+
+
+
+/*------------ Scroller element / index.html */
+
+.scroller {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.scroller__inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.scroller__inner>img {
+    border: 1px solid #bbbbbb00;
+    border-radius: 10px;
+}
+
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,
+            transparent,
+            white 20%,
+            white 80%,
+            transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    flex-wrap: nowrap;
+    -webkit-animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+    animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+}
+
+@-webkit-keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+
 /*------------ Landing page / index.html */
+
+.text-container {
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .text-container {
+        height: 8rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2em !important;
+    }
+}
+
+/*------------ Animation with image bg for heading / index.html */
+
+.heading {
+    margin: 0;
+    font-size: 5vw;
+    color: rgba(225, 225, 225, .01);
+    background-image: url("https://img.freepik.com/free-photo/luxury-plain-green-gradient-abstract-studio-background-empty-room-with-space-your-text-picture_1258-88064.jpg?w=1380&t=st=1699162168~exp=1699162768~hmac=f5f8f5a7a6e910dcda9b372ac7c52705cb425d727fe58a233a57dd5638538374");
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    animation: animate 15s ease-in-out infinite;
+    font-weight: 900;
+}
+
+
+@keyframes animate {
+
+    0%,
+    100% {
+        background-position: left top;
+    }
+
+    25% {
+        background-position: right bottom;
+    }
+
+    50% {
+        background-position: left bottom;
+    }
+
+    75% {
+        background-position: right top;
+    }
+}
+
+/*------------ Hoover for category pick / index.html */
+
+.category-pick {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    /* Remove default underline on the text */
+    color: inherit;
+    /* Preserve the original text color */
+}
+
+.category-pick::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    /* Adjust the thickness of the underline */
+    background-color: #28a745;
+    /* Green color */
+    transition: width 0.3s ease-in-out;
+    /* Add a smooth transition effect */
+}
+
+.category-pick:hover::after {
+    width: 100%;
+}
+
 
 #landing-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
 }
 
 #landing-page .row {
@@ -301,6 +523,7 @@ a.nav-link.main-logo-link {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.051);
     text-align: center;
+    
 }
 
 .testimonial-author {
@@ -323,7 +546,7 @@ a.nav-link.main-logo-link {
 }
 
 .testimonial-list {
-    height: 300px;
+    height: fit-content;
     overflow-y: scroll;
 }
 

@@ -9,16 +9,17 @@
 <!-- Landing Page -->
 
 <div class="container mx-auto" id="landing-page">
-    <div class="row">
+    <div class="row d-flex align-items-center">
         <div class="col-md-6 my-auto text-center">
             <h1 class="display-2">Bloomella</h1>
             <p>Where every bloom tells a story<br>Odessa's premier flower delivery service</p>
             <div class="my-5">
                 <span>
                     <a href="{% url 'products' %}"
-                        class="shop-now-button btn btn-outline-success text-uppercase btn-sm">Shop
+                        class="shop-now-button btn btn-outline-success text-uppercase btn-sm py-2 px-4">Shop
                         Now</a>
-                    <a href="#about" class="shop-now-button btn btn-outline-success text-uppercase">Learn More</a>
+                    <a href="#about" class="shop-now-button btn btn-outline-success text-uppercase py-2 px-4">Learn
+                        More</a>
                 </span>
             </div>
         </div>
@@ -65,56 +66,120 @@
     </div>
 </div>
 
+<div class="arrow-down-container d-none d-md-block">
+    <div class="arrow-down" data-target-section="store-section">
+        <i class="fas fa-arrow-down fa-bounce"></i>
+    </div>
+</div>
 
 <!-- What We Offer Section -->
 
+<div class="container text-container" id="store-section">
+    <h1 class="heading">What's in Store for You</h1>
+</div>
+
+<main class="main flow">
+    <div class="main__flower-cards flower-cards">
+        <div class="flower-cards__inner text-center">
+            <div class="flower-cards__flower-card flower-card">
+                <i class="fas fa-leaf fa-2x"></i>
+                <h2 class="flower-card__heading">Fresh Flowers Daily</h2>
+                <p class="flower-card__bullets">We offer fresh flowers daily, carefully selected and arranged just for
+                    you.
+                    Order from us today and let us help you delivery the perfect arrangement!</p>
+            </div>
+
+            <div class="flower-cards__flower-card flower-card">
+                <i class="fas fa-truck fa-2x"></i>
+                <h2 class="flower-card__heading">Quick Delivery</h2>
+                <span class="flower-card__price">Free delivery on orders over €{{ free_delivery_threshold }}!</span>
+                <p class="flower-card__bullets">We offer fast and reliable delivery options to get your flowers to their
+                    destination on time.</p>
+            </div>
+
+            <div class="flower-cards__flower-card flower-card">
+                <i class="fas fa-gift fa-2x"></i>
+                <h2 class="flower-card__heading">Gifts for Special Occasions</h2>
+                <p class="flower-card__bullets">Whether you're celebrating a birthday, or any special occasion, we've got the ideal gift to make it truly memorable. Send flowers and make a lasting impression.</p>
+            </div>
+
+            <div class="flower-cards__flower-card flower-card">
+                <i class="fas fa-thumbs-up fa-2x"></i>
+                <h2 class="flower-card__heading">Quality Assurance</h2>
+                <p class="flower-card__bullets">We take pride in the quality of our flowers and arrangements. Our team
+                    ensures that every order meets our high standards of freshness and beauty.</p>
+            </div>
+
+            <div class="flower-cards__flower-card flower-card">
+                <i class="fas fa-mobile fa-2x"></i>
+                <h2 class="flower-card__heading">Excellent Customer Service</h2>
+                <p class="flower-card__bullets">Our friendly and knowledgeable team is always here to help you with any
+                    questions or concerns you may have. We're dedicated to providing you with the best possible
+                    experience.</p>
+            </div>
+
+            <div class="flower-cards__flower-card flower-card">
+                <i class="fas fa-heart fa-2x"></i>
+                <h2 class="flower-card__heading">Passion for Flowers</h2>
+                <p class="flower-card__bullets">Flowers are our passion, and we love sharing that passion with our
+                    customers. We believe that flowers have the power to brighten any day and bring joy to any occasion.
+                </p>
+            </div>
+        </div>
+
+        <div class="overlay flower-cards__inner"></div>
+    </div>
+</main>
+
+
 <div class="container">
-    <div class="row text-center card-column">
-        <div class="col-sm-4">
-            <i class="fas fa-leaf fa-2x mb-4"></i>
-            <div class="font-weight-bold h5">Fresh Flowers Daily</div>
-            <p>We offer fresh flowers daily, carefully selected and arranged just for you.
-                Come visit us today and let us help you find the perfect arrangement!</p>
-        </div>
-        <div class="col-sm-4">
-            <i class="fas fa-truck fa-2x mb-4"></i>
-            <div class="font-weight-bold h5">Quick Delivery</div>
-            <span>Free delivery on orders over €{{ free_delivery_threshold }}!</span>
-            <p>We offer fast and reliable delivery options to get your flowers to their destination on time.</p>
-        </div>
-        <div class="col-sm-4">
-            <i class="fas fa-gift fa-2x mb-4"></i>
-            <div class="font-weight-bold h5">Gifts for Special Occasions</div>
-            <p>Whether it's a birthday, anniversary, or other special occasion, we have the perfect gift to make it
-                unforgettable.</p>
-        </div>
-        <div class="col-sm-4">
-            <i class="fas fa-thumbs-up fa-2x mb-4 mt-3"></i>
-            <div class="font-weight-bold h5">Quality Assurance</div>
-            <p>We take pride in the quality of our flowers and arrangements. Our team ensures that every order meets our high standards of freshness and beauty.</p>
-        </div>
-        <div class="col-sm-4">
-            <i class="fas fa-mobile fa-2x mb-4 mt-3"></i>
-            <div class="font-weight-bold h5">Excellent Customer Service</div>
-            <p>Our friendly and knowledgeable team is always here to help you with any questions or concerns you may have. We're dedicated to providing you with the best possible experience.</p>
-        </div>
-        <div class="col-sm-4">
-            <i class="fas fa-heart fa-2x mb-4 mt-3"></i>
-            <div class="font-weight-bold h5">Passion for Flowers</div>
-            <p>Flowers are our passion, and we love sharing that passion with our customers. We believe that flowers have the power to brighten any day and bring joy to any occasion.</p>
+
+    <div class="scroller" data-speed="slow">
+        <ul class="tag-list scroller__inner list-unstyled">
+            <li>Bouquets</li>
+            <li>Arrangements</li>
+            <li>Roses</li>
+            <li>Tulips</li>
+            <li>Wedding Flowers</li>
+            <li>Floral Design</li>
+            <li>Seasonal Flowers</li>
+            <li>Blossoms</li>
+            <li>Petals</li>
+            <li>Flower Delivery</li>
+            <li>Chrysanthemums</li>
+            <li>Odessa Flowers</li>
+        </ul>
+    </div>
+
+    <div class="scroller" data-direction="right" data-speed="slow">
+        <div class="scroller__inner">
+            <img src="{% static 'images/beautiful-flowers-blomella.avif' %}"
+                width="150" alt="beautiful-flowers-blomella">
+            <img src="{% static 'images/bouquets-bloomella-odessa.avif' %}" width="150" alt="bouquets-bloomella-odessa">
+            <img src="{% static 'images/flower-box-bloomella.avif' %}" width="150" alt="flower-box-bloomella">
+            <img src="{% static 'images/flowers-blomella-ukraine.avif' %}" width="150" alt="flowers-blomella-ukraine">
+            <img src="{% static 'images/flowers-delivery-ukraine-blomella.avif' %}" width="150" alt="flowers-delivery-ukraine-blomella">
+            <img src="{% static 'images/fresh-flowers-bloomella.avif' %}" width="150" alt="fresh-flowers-bloomella">
+            <img src="{% static 'images/long-roses-blomella.avif' %}" width="150" alt="long-roses-blomella">
+            <img src="{% static 'images/mixed-flowers-bloomella.avif' %}" width="150" alt="mixed-flowers-bloomella">
+            <img src="{% static 'images/redroses-bloomella-flowers.avif' %}" width="150" alt="redroses-bloomella-flowers">
+            <img src="{% static 'images/tulips-bloomella-ukraine.avif' %}" width="150" alt="tulips-bloomella-ukraine">
+            <img src="{% static 'images/whiteroses-bloomella.avif' %}" width="150" alt="whiteroses-bloomella">
+            <img src="{% static 'images/roses-ukraine-blomella.avif' %}" width="150" alt="roses-ukraine-blomella">
         </div>
     </div>
 </div>
 
+
 <!-- Quick Pick -->
 
-<section class="quick-pick py-5 my-5">
+<section class="py-3 my-3">
     <div class="container-fluid">
-        <h2 class="text-center mb-5">Quick Pick</h2>
+        <h2 class="text-center mb-5 heading">Quick Pick</h2>
         <div class="ml-auto text-center">
             {% for category in all_categories %}
-            <a class="text-muted small m-2"
-                href="{% url 'products' %}?category={{ category.name }}">{{ category.friendly_name }}</a>
+            <a class="text-muted small m-2 category-pick" href="{% url 'products' %}?category={{ category.name }}">
+                {{ category.friendly_name }}</a>
             {% endfor %}
         </div>
         <div class="product-container col-10 offset-1 mb-3">
@@ -187,21 +252,24 @@
 </section>
 <!-- Our Story container -->
 
-<div class="container py-5 my-5" id="about">
-    <h2 class="text-center mb-4">Our Story</h2>
+<div class="container py-3 my-3" id="about">
+    <h2 class="text-center mb-5 heading">Our Story</h2>
     <div class="row align-items-center">
         <div class="col-md-6">
             <img src="{% static 'images/flower.avif' %}" alt="green flower" class="img-fluid rounded mb-4">
         </div>
         <div class="col-md-6">
-            <p class="quick-pick">Bloomella is a family-owned flower shop that has been serving the local community for over
+            <p class="quick-pick">Bloomella is a family-owned flower shop in Odessa Ukraine that has been serving the local community for
+                over
                 30 years. Our passion for flowers and dedication to providing the highest quality products and services
                 have allowed us to establish a loyal customer base.</p>
-            <p class="quick-pick">We believe that every flower has a story to tell, and we strive to create unique arrangements that
+            <p class="quick-pick">We believe that every flower has a story to tell, and we strive to create unique
+                arrangements that
                 capture the essence of each customer's vision. Whether you're celebrating a special occasion or just
                 want to brighten someone's day, our experienced florists are here to help you find the perfect flowers
                 for any occasion.</p>
-            <p class="quick-pick">Thank you for choosing Bloomella. We look forward to sharing our love of flowers with you.</p>
+            <p class="quick-pick">Thank you for choosing Bloomella. We look forward to sharing our love of flowers with
+                you.</p>
         </div>
     </div>
 </div>
@@ -212,7 +280,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2 class="text-center mb-5">Testimonials</h2>
+                <h2 class="text-center mb-5 heading">Testimonials</h2>
                 {% if request.user.is_authenticated %}
                 <p class="text-center"><a class="btn btn-sm btn-outline-success" href="{% url 'add_testimonial' %}">Add
                         Testimonial</a></p>
@@ -240,7 +308,7 @@
 
 <div class="container mt-2">
     <div>
-        <div class="text-center mt-3 mb-5 h5">Subscribe To Our Newsletter <i class="fa-regular fa-envelope fa-bounce"></i></div>
+        <div class="text-center mt-3 mb-5 heading">Stay in the Loop</div>
     </div>
     <div id="mc_embed_signup" class="mailchimp">
         <form
@@ -260,8 +328,8 @@
                     <div class="response" id="mce-success-response" style="display:none"></div>
                 </div>
                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div hidden aria-hidden="true"><input type="text"
-                        name="b_f287a8cd8b7a95cb3fdef82b8_9f3b075d89" tabindex="-1" value=""></div>
+                <div hidden aria-hidden="true"><input type="text" name="b_f287a8cd8b7a95cb3fdef82b8_9f3b075d89"
+                        tabindex="-1" value=""></div>
                 <div class="optionalParent">
                     <div class="clear foot mr-auto">
                         <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
@@ -275,5 +343,53 @@
         </form>
     </div>
 </div>
+
+<script>
+    const scrollers = document.querySelectorAll(".scroller");
+
+    // If a user hasn't opted in for recuded motion, then we add the animation
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        addAnimation();
+    }
+
+    function addAnimation() {
+        scrollers.forEach((scroller) => {
+            // add data-animated="true" to every `.scroller` on the page
+            scroller.setAttribute("data-animated", true);
+
+            // Make an array from the elements within `.scroller-inner`
+            const scrollerInner = scroller.querySelector(".scroller__inner");
+            const scrollerContent = Array.from(scrollerInner.children);
+
+            // For each item in the array, clone it
+            // add aria-hidden to it
+            // add it into the `.scroller-inner`
+            scrollerContent.forEach((item) => {
+                const duplicatedItem = item.cloneNode(true);
+                duplicatedItem.setAttribute("aria-hidden", true);
+                scrollerInner.appendChild(duplicatedItem);
+            });
+        });
+    }
+</script>
+
+<script>
+    const arrowDown = document.querySelector('.arrow-down');
+
+    function scrollToSection(top) {
+        window.scrollTo({
+            top: top,
+            behavior: 'smooth'
+        });
+    }
+
+    arrowDown.addEventListener('click', (event) => {
+        event.preventDefault();
+        const targetSectionId = arrowDown.getAttribute('data-target-section');
+        const targetSection = document.getElementById(targetSectionId);
+        scrollToSection(targetSection.offsetTop);
+    });
+</script>
+
 
 {% endblock %}

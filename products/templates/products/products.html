@@ -66,7 +66,7 @@
             <h2>Products</h2>
             <div class="ml-auto text-center">
                 {% for category in all_categories %}
-                <a class="text-muted small m-2"
+                <a class="text-muted small m-2 category-pick"
                     href="{% url 'products' %}?category={{ category.name }}">{{ category.friendly_name }}</a>
                 {% endfor %}
             </div>
