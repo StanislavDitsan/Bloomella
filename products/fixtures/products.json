@@ -34,28 +34,4 @@
         "image_url": "https://example.com/images/tulip_bouquet.jpg",
         "image": "tulip_bouquet.jpg"
     }
-}, {
-    "pk": 4,
-    "model": "products.product",
-    "fields": {
-        "name": "Potted Plant",
-        "description": "A low-maintenance potted plant that will brighten up any room.",
-        "price": 19.99,
-        "category": 4,
-        "rating": 4.2,
-        "image_url": "https://example.com/images/potted_plant.jpg",
-        "image": "potted_plant.jpg"
-    }
-}, {
-    "pk": 5,
-    "model": "products.product",
-    "fields": {
-        "name": "Gift Basket",
-        "description": "A selection of flowers, chocolates, and other treats, perfect for a special occasion.",
-        "price": 49.99,
-        "category": 5,
-        "rating": 4.7,
-        "image_url": "https://example.com/images/gift_basket.jpg",
-        "image": "gift_basket.jpg"
-    }
 }]
