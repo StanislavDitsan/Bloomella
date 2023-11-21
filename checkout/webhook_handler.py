@@ -7,10 +7,8 @@ from products.models import Product
 from profiles.models import UserProfile
 
 import stripe
-
 import json
 import time
-
 
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
@@ -51,13 +49,18 @@ class StripeWH_Handler:
 
         stripe_charge = stripe.Charge.retrieve(intent.latest_charge)
 
-        billing_details = stripe_charge.billing_details  # updated
+        billing_details = stripe_charge.billing_details
         shipping_details = intent.shipping
-        grand_total = round(stripe_charge.amount / 100, 2)  # updated
+        grand_total = round(stripe_charge.amount / 100, 2)
 
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
+
+        delivery_day = intent.metadata.delivery_day
+        recipient_phone_number = intent.metadata.recipient_phone_number
+        card_note = intent.metadata.card_note
+
         profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
@@ -68,10 +71,8 @@ class StripeWH_Handler:
                 profile.default_country = shipping_details.address.country
                 profile.default_postcode = shipping_details.address.postal_code
                 profile.default_town_or_city = shipping_details.address.city
-                profile.default_street_address1 = (
-                    shipping_details.address.line1)
-                profile.default_street_address2 = (
-                    shipping_details.address.line2)
+                profile.default_street_address1 = shipping_details.address.line1
+                profile.default_street_address2 = shipping_details.address.line2
                 profile.default_county = shipping_details.address.state
                 profile.save()
 
@@ -89,22 +90,23 @@ class StripeWH_Handler:
                     street_address1__iexact=shipping_details.address.line1,
                     street_address2__iexact=shipping_details.address.line2,
                     county__iexact=shipping_details.address.state,
-                    delivery_day=delivery_day,
-                    recipient_phone_number=recipient_phone_number,
-                    card_note=card_note,
                     grand_total=grand_total,
                     original_bag=bag,
                     stripe_pid=pid,
+                    delivery_day=delivery_day,
+                    recipient_phone_number=recipient_phone_number,
+                    card_note=card_note,
                 )
                 order_exists = True
                 break
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
+
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(content=f'Webhook received: {event["type"]} \
-                | SUCCESS: Verified order already in database',
+                | SUCCESS: Verified order already in the database',
                                 status=200)
         else:
             order = None
@@ -119,12 +121,13 @@ class StripeWH_Handler:
                     street_address1=shipping_details.address.line1,
                     street_address2=shipping_details.address.line2,
                     county=shipping_details.address.state,
+                    original_bag=bag,
+                    stripe_pid=pid,
                     delivery_day=delivery_day,
                     recipient_phone_number=recipient_phone_number,
                     card_note=card_note,
-                    original_bag=bag,
-                    stripe_pid=pid,
                 )
+
                 for item_id, item_data in json.loads(bag).items():
                     product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
@@ -135,8 +138,7 @@ class StripeWH_Handler:
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items(
-                        ):
+                        for size, quantity in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
