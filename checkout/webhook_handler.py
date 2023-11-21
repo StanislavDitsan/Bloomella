@@ -93,12 +93,12 @@ class StripeWH_Handler:
                     street_address1__iexact=shipping_details.address.line1,
                     street_address2__iexact=shipping_details.address.line2,
                     county__iexact=shipping_details.address.state,
-                    grand_total=grand_total,
-                    original_bag=bag,
-                    stripe_pid=pid,
                     delivery_day=delivery_day,
                     recipient_phone_number=recipient_phone_number,
                     card_note=card_note,
+                    grand_total=grand_total,
+                    original_bag=bag,
+                    stripe_pid=pid,
                 )
                 order_exists = True
                 break
@@ -123,11 +123,11 @@ class StripeWH_Handler:
                     street_address1=shipping_details.address.line1,
                     street_address2=shipping_details.address.line2,
                     county=shipping_details.address.state,
-                    original_bag=bag,
-                    stripe_pid=pid,
                     delivery_day=delivery_day,
                     recipient_phone_number=recipient_phone_number,
                     card_note=card_note,
+                    original_bag=bag,
+                    stripe_pid=pid,
                 )
                 for item_id, item_data in json.loads(bag).items():
                     product = Product.objects.get(id=item_id)
