@@ -54,13 +54,21 @@ def checkout(request):
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
+            'delivery_day': request.POST['delivery_day'],
+            'recipient_phone_number': request.POST['recipient_phone_number'],
+            'card_note': request.POST['card_note'],
         }
+
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
+            order.delivery_day = order_form.cleaned_data['delivery_day']
+            order.recipient_phone_number = order_form.cleaned_data['recipient_phone_number']
+            order.card_note = order_form.cleaned_data['card_note']
+
             order.save()
             for item_id, item_data in bag.items():
                 try:

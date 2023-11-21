@@ -49,6 +49,10 @@ class StripeWH_Handler:
         bag = intent.metadata.bag
         save_info = intent.metadata.save_info
 
+        delivery_day = intent.metadata.delivery_day
+        recipient_phone_number = intent.metadata.recipient_phone_number
+        card_note = intent.metadata.card_note
+
         stripe_charge = stripe.Charge.retrieve(intent.latest_charge)
 
         billing_details = stripe_charge.billing_details  # updated
@@ -92,6 +96,9 @@ class StripeWH_Handler:
                     grand_total=grand_total,
                     original_bag=bag,
                     stripe_pid=pid,
+                    delivery_day=delivery_day,
+                    recipient_phone_number=recipient_phone_number,
+                    card_note=card_note,
                 )
                 order_exists = True
                 break
@@ -118,6 +125,9 @@ class StripeWH_Handler:
                     county=shipping_details.address.state,
                     original_bag=bag,
                     stripe_pid=pid,
+                    delivery_day=delivery_day,
+                    recipient_phone_number=recipient_phone_number,
+                    card_note=card_note,
                 )
                 for item_id, item_data in json.loads(bag).items():
                     product = Product.objects.get(id=item_id)

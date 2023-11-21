@@ -5,6 +5,11 @@ This is a confirmation of your order at Bloomella. Your order information is bel
 Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
 
+Delivery Details:
+Delivery Day: {{ order.delivery_day }}
+Recipient Phone Number: {{ order.recipient_phone_number }}
+Note for the Card: {{ order.card_note }}
+
 Order Total: €{{ order.order_total }}
 Delivery: €{{ order.delivery_cost }}
 Grand Total: €{{ order.grand_total }}

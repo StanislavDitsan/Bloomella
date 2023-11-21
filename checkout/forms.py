@@ -4,6 +4,25 @@ from .models import Order
 
 class OrderForm(forms.ModelForm):
 
+    delivery_day = forms.DateField(
+        widget=forms.TextInput(attrs={'type': 'date'}),
+        required=False,
+        help_text='Select a delivery day'
+    )
+
+    recipient_phone_number = forms.CharField(
+        max_length=20,
+        required=False,
+        help_text='Recipient phone number'
+    )
+
+    card_note = forms.CharField(
+        max_length=100,
+        required=False,
+        widget=forms.Textarea(attrs={'rows': 2}),
+        help_text='Note for the card (max 100 characters)'
+    )
+
     class Meta:
         model = Order
         fields = (
@@ -25,6 +44,9 @@ class OrderForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
+            'delivery_day': 'Select a delivery day',
+            'recipient_phone_number': 'Recipient phone number',
+            'card_note': 'Note for the card (max 100 characters)',
             'full_name': 'Full Name',
             'email': 'Email Address',
             'phone_number': 'Phone Number',
