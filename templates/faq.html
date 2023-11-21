@@ -17,15 +17,17 @@
                 <div class="mb-0 text-left">
                     <button class="btn btn-link text-decoration-none" type="button" data-toggle="collapse"
                         data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <span class="h6">How do I place an order for flowers?</span>
+                        <span class="h6">Order Placement</span>
                     </button>
                 </div>
             </div>
 
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
-                    To place an order for flowers, you can either visit our shop in person or give us a call at
-                    555-1234. You can also browse our selection of flowers and order online through our website.
+                    You can place orders through our website at any time of the day. Note: Orders will be processed
+                    during the working hours 09:00 - 20:00 UTC time zone.
+                    <br>Orders are processed upon receipt, and confirmation will be sent to the provided contact
+                    information.
                 </div>
             </div>
         </div>
@@ -34,15 +36,17 @@
             <div class="mb-0 text-left">
                 <button class="btn btn-link text-decoration-none" type="button" data-toggle="collapse"
                     data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <span class="h6">Do you offer same-day delivery?</span>
+                    <span class="h6">Payment</span>
                 </button>
             </div>
         </div>
 
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
             <div class="card-body">
-                Yes, we offer same-day delivery for orders placed before 4pm. Orders placed after 4pm will be delivered
-                the following day.
+                We accept Stripe.
+                <br>
+                Payment is required at the time of order placement.
+
             </div>
         </div>
 
@@ -50,15 +54,17 @@
             <div class="mb-0 text-left">
                 <button class="btn btn-link text-decoration-none" type="button" data-toggle="collapse"
                     data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <span class="h6">What is your return policy?</span>
+                    <span class="h6">Product Availability</span>
                 </button>
             </div>
         </div>
 
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
             <div class="card-body">
-                We do not accept returns on floral arrangements, but if you are unsatisfied with your order for any
-                reason, please contact us and we will do our best to make it right.
+                All products displayed are subject to availability.
+                <br>
+                If a particular type of flower becomes unavailable, we will make every effort to substitute it with the
+                most similar and comparable flowers available.
             </div>
         </div>
 
@@ -66,15 +72,16 @@
             <div class="mb-0 text-left">
                 <button class="btn btn-link text-decoration-none" type="button" data-toggle="collapse"
                     data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    <span class="h6">Can I customize a floral arrangement?</span>
+                    <span class="h6">Cancellation</span>
                 </button>
             </div>
         </div>
 
         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
             <div class="card-body">
-                Yes, we can customize a floral arrangement to your specifications. Please give us a call or visit us in
-                person to discuss your preferences.
+                Orders can be canceled within 35min after placement.
+                <br>
+                Contact <a href="{% url 'support_ticket' %}">support ticket</a> for cancellation requests.
             </div>
         </div>
 
@@ -82,14 +89,15 @@
             <div class="mb-0 text-left">
                 <button class="btn btn-link text-decoration-none" type="button" data-toggle="collapse"
                     data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    <span class="h6">What forms of payment do you accept?</span>
+                    <span class="h6">Delivery Time</span>
                 </button>
             </div>
         </div>
         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
             <div class="card-body">
-                We accept all major credit cards, as well as cash and checks. For online orders, we also accept payment
-                through PayPal.
+                Generally, delivery takes approximately 1-2 hours, depending on the recipient's availability.
+                <br>
+                Delays may occur due to unforeseen circumstances.
             </div>
         </div>
 
@@ -97,15 +105,51 @@
             <div class="mb-0 text-left">
                 <button class="btn btn-link text-decoration-none" type="button" data-toggle="collapse"
                     data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                    <span class="h6">Do you offer wedding floral arrangements?</span>
+                    <span class="h6">Delivery Charges</span>
                 </button>
             </div>
         </div>
 
         <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
             <div class="card-body">
-                Yes, we specialize in wedding floral arrangements. Please give us a call, send email or visit us in person to
-                discuss your wedding flowers.
+                Delivery charges apply and are outlined during the checkout process.
+                <br>
+                Free delivery may be available for orders exceeding $100.
+            </div>
+        </div>
+
+        <div class="py-1" id="headingSeven">
+            <div class="mb-0 text-left">
+                <button class="btn btn-link text-decoration-none" type="button" data-toggle="collapse"
+                    data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    <span class="h6">Receiving Orders</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+            <div class="card-body">
+                Ensure someone is available to receive the order at the provided delivery address.
+                <br>
+                Delivery personnel will attempt to contact recipients before delivery.
+            </div>
+        </div>
+
+        <div class="py-1" id="headingEight">
+            <div class="mb-0 text-left">
+                <button class="btn btn-link text-decoration-none" type="button" data-toggle="collapse"
+                    data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    <span class="h6">Returns</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+            <div class="card-body">
+                We do not accept returns for our products. All sales are final. If you receive damaged flowers, please
+                contact
+                <a href="{% url 'support_ticket' %}">customer support</a> for assistance. Thank you for your
+                understanding.
             </div>
         </div>
 
