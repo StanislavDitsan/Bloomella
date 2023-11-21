@@ -54,9 +54,6 @@ class StripeWH_Handler:
         billing_details = stripe_charge.billing_details  # updated
         shipping_details = intent.shipping
         grand_total = round(stripe_charge.amount / 100, 2)  # updated
-        delivery_day = intent.metadata.delivery_day
-        recipient_phone_number = intent.metadata.recipient_phone_number
-        card_note = intent.metadata.card_note
 
         for field, value in shipping_details.address.items():
             if value == "":
