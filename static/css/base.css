@@ -562,8 +562,8 @@ a.nav-link.main-logo-link {
 }
 
 .btn:hover {
-    background-color: #ffffff;
-    color: black;
+    background-color: #2b2b2b;
+    color: #fff;
     box-shadow: 1px 8px 16px 1px rgba(183, 182, 182, 0.496);
 }
 
