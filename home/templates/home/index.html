@@ -100,7 +100,8 @@
             <div class="flower-cards__flower-card flower-card">
                 <i class="fas fa-gift fa-2x"></i>
                 <h2 class="flower-card__heading">Gifts for Special Occasions</h2>
-                <p class="flower-card__bullets">Whether you're celebrating a birthday, or any special occasion, we've got the ideal gift to make it truly memorable. Send flowers and make a lasting impression.</p>
+                <p class="flower-card__bullets">Whether you're celebrating a birthday, or any special occasion, we've
+                    got the ideal gift to make it truly memorable. Send flowers and make a lasting impression.</p>
             </div>
 
             <div class="flower-cards__flower-card flower-card">
@@ -153,16 +154,18 @@
 
     <div class="scroller" data-direction="right" data-speed="slow">
         <div class="scroller__inner">
-            <img src="{% static 'images/beautiful-flowers-blomella.avif' %}"
-                width="150" alt="beautiful-flowers-blomella">
+            <img src="{% static 'images/beautiful-flowers-blomella.avif' %}" width="150"
+                alt="beautiful-flowers-blomella">
             <img src="{% static 'images/bouquets-bloomella-odessa.avif' %}" width="150" alt="bouquets-bloomella-odessa">
             <img src="{% static 'images/flower-box-bloomella.avif' %}" width="150" alt="flower-box-bloomella">
             <img src="{% static 'images/flowers-blomella-ukraine.avif' %}" width="150" alt="flowers-blomella-ukraine">
-            <img src="{% static 'images/flowers-delivery-ukraine-blomella.avif' %}" width="150" alt="flowers-delivery-ukraine-blomella">
+            <img src="{% static 'images/flowers-delivery-ukraine-blomella.avif' %}" width="150"
+                alt="flowers-delivery-ukraine-blomella">
             <img src="{% static 'images/fresh-flowers-bloomella.avif' %}" width="150" alt="fresh-flowers-bloomella">
             <img src="{% static 'images/long-roses-blomella.avif' %}" width="150" alt="long-roses-blomella">
             <img src="{% static 'images/mixed-flowers-bloomella.avif' %}" width="150" alt="mixed-flowers-bloomella">
-            <img src="{% static 'images/redroses-bloomella-flowers.avif' %}" width="150" alt="redroses-bloomella-flowers">
+            <img src="{% static 'images/redroses-bloomella-flowers.avif' %}" width="150"
+                alt="redroses-bloomella-flowers">
             <img src="{% static 'images/tulips-bloomella-ukraine.avif' %}" width="150" alt="tulips-bloomella-ukraine">
             <img src="{% static 'images/whiteroses-bloomella.avif' %}" width="150" alt="whiteroses-bloomella">
             <img src="{% static 'images/roses-ukraine-blomella.avif' %}" width="150" alt="roses-ukraine-blomella">
@@ -259,7 +262,8 @@
             <img src="{% static 'images/flower.avif' %}" alt="green flower" class="img-fluid rounded mb-4">
         </div>
         <div class="col-md-6">
-            <p class="quick-pick">Bloomella is a family-owned flower shop in Odessa Ukraine that has been serving the local community for
+            <p class="quick-pick">Bloomella is a family-owned flower shop in Odessa Ukraine that has been serving the
+                local community for
                 over
                 30 years. Our passion for flowers and dedication to providing the highest quality products and services
                 have allowed us to establish a loyal customer base.</p>
@@ -343,6 +347,33 @@
         </form>
     </div>
 </div>
+
+<!-- Cookie Consent Popup -->
+<div id="cookie-popup" class="cookie-popup">
+    <p>This website uses cookies to ensure you get the best experience on our website. <a
+            href="https://www.privacypolicygenerator.info/live.php?token=goQHI2oDinSM80yTGCRckaiS307S3dKy">Learn more</a></p>
+    <button type="button" id="accept-cookies" class=" btn btn-outline-success">Got it!</button>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Check if the user has already accepted cookies
+        if (!localStorage.getItem("cookieAccepted")) {
+            // If not, show the cookie consent popup
+            document.getElementById("cookie-popup").style.display = "block";
+        }
+
+        // Add event listener for the "Got it!" button
+        document.getElementById("accept-cookies").addEventListener("click", function () {
+            // Hide the cookie popup
+            document.getElementById("cookie-popup").style.display = "none";
+
+            // Set a flag in localStorage to remember that the user accepted cookies
+            localStorage.setItem("cookieAccepted", true);
+        });
+    });
+
+</script>
 
 <script>
     const scrollers = document.querySelectorAll(".scroller");
