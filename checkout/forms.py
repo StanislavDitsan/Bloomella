@@ -35,7 +35,10 @@ class OrderForm(forms.ModelForm):
             'postcode',
             'country',
             'county',
-        )
+            'delivery_day',
+            'recipient_phone_number',
+            'card_note',
+)
 
     def __init__(self, *args, **kwargs):
         """
