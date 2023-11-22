@@ -62,9 +62,6 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
-            order.delivery_day = order_form.cleaned_data['delivery_day']
-            order.recipient_phone_number = order_form.cleaned_data['recipient_phone_number']
-            order.card_note = order_form.cleaned_data['card_note']
 
             order.save()
             for item_id, item_data in bag.items():
