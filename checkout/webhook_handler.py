@@ -9,9 +9,7 @@ from profiles.models import UserProfile
 import stripe
 import json
 import time
-import logging
 
-logger = logging.getLogger(__name__)
 
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
@@ -62,10 +60,6 @@ class StripeWH_Handler:
                 if value == "":
                     shipping_details.address[field] = None
 
-            delivery_day = intent.metadata.get('delivery_day', 'DefaultDeliveryDay')
-            recipient_phone_number = intent.metadata.get('recipient_phone_number')
-            card_note = intent.metadata.get('card_note')
-
             profile = None
             username = intent.metadata.username
             if username != 'AnonymousUser':
@@ -98,9 +92,6 @@ class StripeWH_Handler:
                         grand_total=grand_total,
                         original_bag=bag,
                         stripe_pid=pid,
-                        delivery_day=shipping_details.delivery_day,
-                        recipient_phone_number=shipping_details.recipient_phone_number,
-                        card_note=shipping_details.card_note,
                     )
                     order_exists = True
                     break
@@ -128,9 +119,6 @@ class StripeWH_Handler:
                         county=shipping_details.address.state,
                         original_bag=bag,
                         stripe_pid=pid,
-                        delivery_day=shipping_details.delivery_day,
-                        recipient_phone_number=shipping_details.recipient_phone_number,
-                        card_note=shipping_details.card_note,
                     )
 
                     for item_id, item_data in json.loads(bag).items():

@@ -54,9 +54,6 @@ def checkout(request):
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
-            'delivery_day': request.POST['delivery_day'],
-            'recipient_phone_number': request.POST['recipient_phone_number'],
-            'card_note': request.POST['card_note'],
         }
 
         order_form = OrderForm(form_data)

@@ -4,25 +4,6 @@ from .models import Order
 
 class OrderForm(forms.ModelForm):
 
-    delivery_day = forms.DateField(
-        widget=forms.TextInput(attrs={'type': 'date'}),
-        required=False,
-        help_text='Select a delivery day'
-    )
-
-    recipient_phone_number = forms.CharField(
-        max_length=20,
-        required=True,
-        help_text='Recipient phone number'
-    )
-
-    card_note = forms.CharField(
-        max_length=100,
-        required=False,
-        widget=forms.Textarea(attrs={'rows': 2}),
-        help_text='Note for the card (max 100 characters)'
-    )
-
     class Meta:
         model = Order
         fields = (
@@ -35,9 +16,6 @@ class OrderForm(forms.ModelForm):
             'postcode',
             'country',
             'county',
-            'delivery_day',
-            'recipient_phone_number',
-            'card_note',
 )
 
     def __init__(self, *args, **kwargs):
@@ -47,16 +25,13 @@ class OrderForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
-            'delivery_day': 'Select a delivery day',
-            'recipient_phone_number': 'Recipient phone number',
-            'card_note': 'Note for the card (max 100 characters)',
             'full_name': 'Full Name',
             'email': 'Email Address',
-            'phone_number': 'Phone Number',
+            'phone_number': 'Recipient Phone Number',
             'postcode': 'Postal Code',
             'town_or_city': 'Town or City',
             'street_address1': 'Street Address 1',
-            'street_address2': 'Street Address 2',
+            'street_address2': 'Delivery Date and Notes',
             'county': 'County, State or Locality',
         }
 
