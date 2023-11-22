@@ -62,7 +62,7 @@ class StripeWH_Handler:
                 if value == "":
                     shipping_details.address[field] = None
 
-            delivery_day = intent.metadata.delivery_day
+            delivery_day = intent.metadata.get('delivery_day', 'DefaultDeliveryDay')
             recipient_phone_number = intent.metadata.recipient_phone_number
             card_note = intent.metadata.card_note
 
