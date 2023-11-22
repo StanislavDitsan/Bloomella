@@ -12,7 +12,7 @@ class OrderForm(forms.ModelForm):
 
     recipient_phone_number = forms.CharField(
         max_length=20,
-        required=False,
+        required=True,
         help_text='Recipient phone number'
     )
 
