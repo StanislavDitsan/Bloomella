@@ -20,6 +20,7 @@ class StripeWH_Handler:
     def _send_confirmation_email(self, order):
         """ Send the user a confirmation email """
         cust_email = order.email
+        admin_email = settings.ORDER_NOTIFICATION_EMAIL
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
             {'order': order})
@@ -30,7 +31,13 @@ class StripeWH_Handler:
                 'contact_email': settings.DEFAULT_FROM_EMAIL
             })
 
+        # Send email to customer
         send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, [cust_email])
+
+        # Send email notification to store admin
+        admin_subject = f'New Order Placed - Order #{order.order_number}'
+        admin_body = f'A new order has been placed.\nOrder Number: {order.order_number}\nCustomer: {order.full_name}\nTotal Amount: €{order.grand_total}'
+        send_mail(admin_subject, admin_body, settings.DEFAULT_FROM_EMAIL, [admin_email])
 
     def handle_event(self, event):
         """
