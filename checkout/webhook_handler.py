@@ -36,7 +36,7 @@ class StripeWH_Handler:
 
         # Send email notification to store admin
         admin_subject = f'New Order Placed - Order #{order.order_number}'
-        admin_body = f'A new order has been placed.\nProduct Name: {item.product.name}\nOrder Number: {order.order_number}\nCustomer: {order.full_name}\nTotal Amount: €{order.grand_total}'
+        admin_body = f'A new order has been placed.\nOrder Number: {order.order_number}\nCustomer: {order.full_name}\nTotal Amount: €{order.grand_total}'
         send_mail(admin_subject, admin_body, settings.DEFAULT_FROM_EMAIL, [admin_email])
 
     def handle_event(self, event):
