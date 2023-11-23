@@ -1,6 +1,8 @@
 Hello {{ order.full_name }}!
 
-This is a confirmation of your order at Bloomella. Your order information is below:
+This is a confirmation of your order at Bloomella Flowers.
+
+Your order information is below:
 
 Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
@@ -15,10 +17,13 @@ Delivery date and note: {{ order.street_address2 }}
 
 We've got recepient phone number on file as {{ order.phone_number }}.
 
-If you have any questions, feel free to contact us at {{ contact_email }}.
+If you have any questions, please don't hesitate to reach out to us at {{ contact_email }}.
+Feel free to reply to this email with any inquiries you may have. We're here to help!
 
 Thank you for your order!
 
 Sincerely,
 
-Bloomella
+Bloomella Flowers
+
+Odessa Ukraine 🇺🇦 
