@@ -373,6 +373,16 @@ a.nav-link.main-logo-link {
     color: #333;
 }
 
+.all-products {
+    overflow-y: auto;
+    /* Use 'scroll' if you always want a scrollbar, 'auto' shows it only when needed */
+    max-height: 800px;
+    /* Adjust the maximum height as needed */
+    scroll-behavior: smooth;
+    /* Add smooth scrolling behavior */
+}
+
+
 /*------------ Highlights the active sorting btn */
 .dropdown-item.selected {
     font-weight: bold;
@@ -523,7 +533,7 @@ a.nav-link.main-logo-link {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.051);
     text-align: center;
-    
+
 }
 
 .testimonial-author {

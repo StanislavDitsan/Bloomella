@@ -74,6 +74,8 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
+    # Fetch the list of all products
+    all_products_list = Product.objects.all()
     """ Add a product to the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
@@ -95,6 +97,7 @@ def add_product(request):
     template = 'products/add_product.html'
     context = {
         'form': form,
+        'products': all_products_list,  # Pass the list of all products to the template
     }
 
     return render(request, template, context)
