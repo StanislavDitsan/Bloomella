@@ -40,7 +40,7 @@
             <h5 class="text-muted">All Products</h5>
             <ul class="list-unstyled">
                 {% for product in products %}
-                    <li><a href="{% url 'product_detail' product.id %}">{{ product.name }}</a></li>
+                    <li><a href="{% url 'product_detail' product.id %}">{{ product.name }} | {{ product.category.friendly_name }} </a></li>
                 {% endfor %}
             </ul>
         </div>
