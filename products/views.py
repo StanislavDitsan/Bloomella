@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models.functions import Lower
 from django.http import HttpResponseRedirect
-from .models import Product, Category
+from .models import Product, Category, UserSavedProduct
 from .forms import ProductForm
 import random
 # Create your views here.
@@ -154,21 +154,19 @@ def delete_product(request, product_id):
 @login_required
 def add_to_saved(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
-    if product.saved_for_later:
-        # Remove the saved for later flag from the product
-        product.saved_for_later = False
-        product.save()
-        messages.success(request, 'Product removed from saved!')
-    else:
-        # Mark the product as saved for later
-        product.saved_for_later = True
-        product.save()
-        messages.success(request, 'Product saved for later!')
-    return redirect('product_detail', product_id=product_id)
 
+    # Check if the product is already saved for the current user
+    saved_product, created = UserSavedProduct.objects.get_or_create(user=request.user, product=product)
+
+    if created:
+        messages.success(request, 'Product saved for later!')
+    else:
+        saved_product.delete()
+        messages.success(request, 'Product removed from saved!')
+
+    return redirect('product_detail', product_id=product_id)
 
 @login_required
 def saved_for_later(request):
-    saved_products = Product.objects.filter(saved_for_later=True)
-    return render(request, 'products/saved_for_later.html',
-                  {'saved_products': saved_products})
+    saved_products = UserSavedProduct.objects.filter(user=request.user)
+    return render(request, 'products/saved_for_later.html', {'saved_products': saved_products})
