@@ -8,6 +8,7 @@ Django==3.2
 django-active-link==0.1.8
 django-admin-interface==0.24.2
 django-allauth==0.41.0
+django-cloudinary-storage==0.3.0
 django-colorfield==0.8.0
 django-countries==7.2.1
 django-crispy-forms==1.14.0

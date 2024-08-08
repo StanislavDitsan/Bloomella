@@ -36,6 +36,8 @@ ALLOWED_HOSTS = ['bloomella.herokuapp.com', 'localhost', '.gitpod.io']
 INSTALLED_APPS = [
     'admin_interface',
     'colorfield',
+    'cloudinary_storage',
+    'cloudinary',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -56,9 +58,6 @@ INSTALLED_APPS = [
     'testimonials',
     'crispy_forms',
     'storages',
-    'cloudinary_storage',
-    'cloudinary',
-
 ]
 
 MIDDLEWARE = [
