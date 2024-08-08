@@ -35,15 +35,20 @@
             <p>Out of stock</p>
             {% endif %}
             <p class="lead mb-1 text-left font-weight-bold">€{{ product.price }}</p>
-            {% if product.saved_for_later %}
+            {% if saved_products %}
             <span>
-                <a class="small mt-1 mb-0 text-muted" href="{% url 'add_to_saved' product.id %}"><i
-                        class="fas fa-bookmark text-muted"></i>&nbsp;&nbsp;Remove from saved</a>
-                {% else %}
-                <a class="small mt-1 mb-0 text-muted" href="{% url 'add_to_saved' product.id %}"><i
-                        class="far fa-bookmark text-muted"></i>&nbsp;&nbsp;Save for later</a>
+                <a class="small mt-1 mb-0 text-muted" href="{% url 'add_to_saved' saved_product.product.id %}">
+                    <i class="fas fa-bookmark text-muted"></i>&nbsp;&nbsp;Remove from saved
+                </a>
+            </span>
+            {% else %}
+            <span>
+                <a class="small mt-1 mb-0 text-muted" href="{% url 'add_to_saved' product.id %}">
+                    <i class="far fa-bookmark text-muted"></i>&nbsp;&nbsp;Save for later
+                </a>
             </span>
             {% endif %}
+
             {% if product.category %}
             <p class="small mt-1 mb-0">
                 <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
